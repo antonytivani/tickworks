@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Anthony",
+    "type": "customer",
+    "region": "Gauteng",
+    "message": "lorem xxxx..."
+  },
+  {
+    "name": "Joyce",
+    "type": "customer",
+    "region": "Gauteng",
+    "message": "lorem xxxx..."
+  },
+  {
+    "name": "Bongani",
+    "type": "customer",
+    "region": "Gauteng",
+    "message": "lorem xxxx..."
+  }
+]

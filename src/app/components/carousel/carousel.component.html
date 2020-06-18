@@ -1,0 +1,13 @@
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+  <mdb-carousel-item *ngFor="let carousel of carousels">
+    <div class="view w-100">
+      <img class="d-block w-100" src="{{ carousel.banner }}" alt="First slide" />
+      <div class="mask rgba-black-ligt waves-light" mdbWavesEffect></div>
+    </div>
+    <!-- uncomment this if title and description is needed -->
+    <!-- <div class="carousel-caption">
+      <h3 class="h3-responsive">{{ carousel.title }}</h3>
+      <p>{{ carousel.description }}</p>
+    </div> -->
+  </mdb-carousel-item>
+</mdb-carousel>

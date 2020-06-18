@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "fas fa-gift",
+    "offername": "Genuine Product",
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+  },
+  {
+    "icon": "fas fa-shield-alt",
+    "offername": "Secure Products",
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+  },
+  {
+    "icon": "fas fa-dollar-sign",
+    "offername": "Cash on Delivery",
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+  },
+  {
+    "icon": "fas fa-truck",
+    "offername": "Easy Delivery",
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+  }
+]

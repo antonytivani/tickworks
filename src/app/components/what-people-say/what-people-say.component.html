@@ -1,0 +1,27 @@
+<!-- /testimonials -->
+<div class="testimonials py-lg-4 py-3 mt-4">
+  <div class="testimonials-inner py-lg-4 py-3">
+    <h3 class="tittle-w3layouts text-center my-lg-4 my-4">What people say</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+          <mdb-carousel-item *ngFor="let testimonial of testimonials">
+            <div class="carousel-item active">
+              <div class="testimonials_grid text-center">
+                <h3>
+                  {{ testimonial.name }}
+                  <span>{{ testimonial.type }}</span>
+                </h3>
+                <label>{{ testimonial.region }}</label>
+                <p>
+                  {{ testimonial.message }}
+                </p>
+              </div>
+            </div>
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+    </div>
+  </div>
+  <!-- //testimonials -->
+</div>

@@ -1,0 +1,19 @@
+<!-- /grids -->
+<div class="bottom-sub-grid-content py-lg-5 py-3">
+  <div class="row">
+    <div class="col-lg-4 bottom-sub-grid text-center" *ngFor="let service of services">
+      <div class="bt-icon">
+        <span class="{{ service.icon }}"></span>
+      </div>
+
+      <h4 class="sub-tittle-w3layouts my-lg-4 my-3">{{ service.servicename }}</h4>
+      <p>{{ service.description }}</p>
+      <p>
+        <a href="{{ service.link }}" class="btn btn-sm animated-button gibson-three mt-4">{{
+          service.linkdescription
+        }}</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- //grids -->

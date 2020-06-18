@@ -1,0 +1,32 @@
+@import './assets/css/shop.scss';
+@import './assets/css/style.scss';
+.unique-color {
+  background-color: #f60d0f !important;
+}
+.banner_inner {
+  background: url(/../../../assets/images/banner-mid.jpg) no-repeat 0px -73px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  moz-background-size: cover;
+  min-height: 180px;
+}
+div.carousel.carousel-multi-item.multi-animation {
+  a.btn-floating {
+    color: #ff4e00 !important;
+    margin-right: 10px !important;
+  }
+}
+app-what-people-say {
+  .carousel {
+    .carousel-control-prev-icon {
+      background-image: url(./assets//images/arrow_left_black.svg) !important;
+      margin-top: -6vw;
+    }
+    .carousel-control-next-icon {
+      background-image: url(./assets//images/arrow_right_black.svg) !important;
+      margin-top: -6vw;
+    }
+  }
+}

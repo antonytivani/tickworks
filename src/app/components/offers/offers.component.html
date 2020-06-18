@@ -1,0 +1,13 @@
+<div class="testimonials p-lg-5 p-3 mt-4 mb-5">
+  <div class="row last-section">
+    <div class="col-lg-3 footer-top-w3layouts-grid-sec" *ngFor="let offer of offers">
+      <div class="mail-grid-icon text-center">
+        <i class="{{ offer.icon }}"></i>
+      </div>
+      <div class="mail-grid-text-info">
+        <h3>{{ offer.offername }}</h3>
+        <p>{{ offer.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

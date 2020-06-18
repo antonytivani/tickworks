@@ -1,0 +1,125 @@
+.outer-link-active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+* {
+  box-sizing: border-box;
+  &:before {
+    box-sizing: border-box;
+  }
+  &:after {
+    box-sizing: border-box;
+  }
+}
+.lighter-text {
+  color: #abb0be;
+}
+.main-color-text {
+  color: #f62c0f;
+}
+nav {
+  padding: 20px 0 40px 0;
+  background: #f8f8f8;
+  font-size: 16px;
+  .navbar-left {
+    float: left;
+  }
+  .navbar-right {
+    float: right;
+  }
+  ul {
+    li {
+      display: inline;
+      padding-left: 20px;
+      a {
+        color: #777777;
+        text-decoration: none;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.badge {
+  background-color: #f62c0f;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.shopping-cart {
+  background: white;
+  width: 320px;
+  position: relative;
+  border-radius: 3px;
+  padding: 20px;
+  .shopping-cart-header {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 15px;
+    .shopping-cart-total {
+      float: right;
+    }
+  }
+  .shopping-cart-items {
+    li {
+      border-bottom: 1px solid #e8e8e8;
+      display: block;
+    }
+    img {
+      float: left;
+      margin-right: 12px;
+      margin: 10px 0;
+      width: 60px;
+    }
+    .item-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+    .item-price {
+      color: #f62c0f;
+      margin-right: 8px;
+    }
+    .item-quantity {
+      color: #abb0be;
+    }
+  }
+  &:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+}
+.cart-icon {
+  color: #f62c0f;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+.button {
+  background: #f62c0f;
+  color: white !important;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 20px 0 5px 0;
+  &:hover {
+    background: #f62c0fa6;
+  }
+}
