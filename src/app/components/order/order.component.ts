@@ -6,17 +6,13 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./order.component.css'],
 })
 export class OrderComponent implements OnInit {
-  private showAlert: boolean = false;
-  @ViewChild('alert', { static: true }) alert: ElementRef;
+  @ViewChild('alert', { static: false }) alert: ElementRef;
+
+  closeAlert() {
+    this.alert.nativeElement.classList.remove('show');
+  }
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  openAlert() {
-    this.showAlert = true;
-  }
-  closeAlert() {
-    this.alert.nativeElement.classList.remove('show');
-  }
 }
