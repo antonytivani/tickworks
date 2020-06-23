@@ -192,3 +192,12 @@ p.sub {
 }
 
 /*--//responsive--*/
+
+.table-header {
+  background: #ff4e00;
+  color: #fff;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}

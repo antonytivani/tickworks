@@ -21,7 +21,7 @@
       <p class="sub text-center mb-lg-5 mb-3">It's time to place your order for your goodies!</p>
       <table mdbTable striped="true mb-5">
         <thead>
-          <tr>
+          <tr class="table-header">
             <th *ngFor="let head of headElements" scope="col">{{ head }}</th>
           </tr>
         </thead>
@@ -60,7 +60,10 @@
                 <label class="my-2">Comment</label>
                 <input class="form-control" type="text" name="Name" placeholder="" required="" />
               </div>
-              <input class="form-control" type="submit" value="Place order" />
+              <div class="form-group mt-20">
+                <label class="my-2"></label>
+                <input class="form-control" type="submit" value="Place order" />
+              </div>
             </div>
           </div>
         </form>
