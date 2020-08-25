@@ -1,117 +1,42 @@
 [
   {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/new3-5.png",
+    "name": "Curren 8355",
+    "price": "R799.00"
   },
   {
     "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
+    "name": "Curren 8291",
+    "price": "R649.00"
   },
   {
     "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
+    "name": "Curren 8291",
+    "price": "R649.00"
   },
   {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/new1-3.png",
+    "name": "Curren 8329",
+    "price": "R699.00"
   },
   {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/winner.jpeg",
+    "name": "Winner silver",
+    "price": "R749.00"
   },
   {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/Watch_03.png",
+    "name": "Naviforce 9153",
+    "price": "R849.00"
   },
   {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/Watch_04.png",
+    "name": "Curren 8555 silver",
+    "price": "R799.00"
   },
   {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch6.png",
-    "name": "Title",
-    "price": "1200"
-  },
-  {
-    "image": "../../../assets/images/watch7.png",
-    "name": "Title",
-    "price": "1200"
+    "image": "../../../assets/images/shop/Watch_05.png",
+    "name": "Goldenhour 111",
+    "price": "R649.00"
   }
 ]

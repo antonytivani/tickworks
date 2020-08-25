@@ -14,24 +14,24 @@ export class MultiItemCarouselComponent implements OnInit {
 
   cards = [
     {
-      image: '../../../assets/images/watch6.png',
-      name: 'Title',
-      price: '1200',
+      image: '../../../assets/images/shop/Watch_09.png',
+      name: 'Tevise',
+      price: 'R999.00',
     },
     {
-      image: '../../../assets/images/watch7.png',
-      name: 'Title',
-      price: '1200',
+      image: '../../../assets/images/shop/5.png',
+      name: 'Curren 8329',
+      price: 'R699.00',
     },
     {
-      image: '../../../assets/images/watch6.png',
-      name: 'Title',
-      price: '1200',
+      image: '../../../assets/images/shop/new-3.png',
+      name: 'Curren 8301',
+      price: 'R599.00',
     },
     {
-      image: '../../../assets/images/watch7.png',
-      name: 'Title',
-      price: '1200',
+      image: '../../../assets/images/shop/Watch_01.png',
+      name: 'Curren 000',
+      price: 'R599.00',
     },
     {
       image: '../../../assets/images/watch6.png',
