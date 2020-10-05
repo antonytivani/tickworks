@@ -1,0 +1,45 @@
+.col-md-3.product-men.women_two:nth-child(1) {
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -o-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99);
+}
+
+.col-md-3.product-men.women_two:nth-child(4) {
+  .men-thumb-item {
+    img.img-fluid {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      margin: -59px 0 -62px 0;
+    }
+  }
+}
+
+.col-md-3.product-men.women_two:nth-child(5) {
+  .men-thumb-item {
+    img.img-fluid {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+}
+
+.col-md-3.product-men.women_two:nth-child(7) {
+  .men-thumb-item {
+    img.img-fluid {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      margin: -20px 0 20px 0;
+    }
+  }
+}

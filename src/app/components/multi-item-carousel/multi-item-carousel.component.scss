@@ -6,3 +6,31 @@
 div.carousel.carousel-multi-item.multi-animation {
   background: red !important;
 }
+
+mdb-carousel-item:nth-child(1) {
+  .col-md-3.product-men.women_two:nth-child(2) {
+    .men-thumb-item {
+      img.img-fluid {
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        margin: -20px 0 -40px 0;
+      }
+    }
+  }
+
+  .col-md-3.product-men.women_two:nth-child(3) {
+    .men-thumb-item {
+      img.img-fluid {
+        -webkit-transform: scale(0.88);
+        -moz-transform: scale(0.88);
+        -o-transform: scale(0.88);
+        -ms-transform: scale(0.88);
+        transform: scale(0.88);
+        margin: 0 0 -24px 0;
+      }
+    }
+  }
+}
