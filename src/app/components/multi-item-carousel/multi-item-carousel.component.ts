@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MultiCarousel } from 'src/app/models/multi-carousel';
 import { MultiCarouselService } from 'src/app/services/multi-carousel';
+import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-multi-item-carousel',
@@ -10,48 +12,49 @@ import { MultiCarouselService } from 'src/app/services/multi-carousel';
 export class MultiItemCarouselComponent implements OnInit {
   // cards: MultiCarousel[];
 
-  constructor(private multiCarouselService: MultiCarouselService) {}
+  constructor(private multiCarouselService: MultiCarouselService,
+              private cartService: CartService) {}
 
   cards = [
     {
       image: '../../../assets/images/shop/leather-belt.png',
       name: 'Tevise',
-      price: 'R999.00',
+      price: 999.00,
     },
     {
       image: '../../../assets/images/shop/5.png',
       name: 'Curren 8329',
-      price: 'R699.00',
+      price: 699.00,
     },
     {
       image: '../../../assets/images/shop/new-3.png',
       name: 'Curren 8301',
-      price: 'R599.00',
+      price: 599.00,
     },
     {
       image: '../../../assets/images/shop/watch_011.png',
       name: 'Curren 000',
-      price: 'R599.00',
+      price: 599.00,
     },
     {
       image: '../../../assets/images/watch6.png',
       name: 'Title',
-      price: '1200',
+      price: 1200,
     },
     {
       image: '../../../assets/images/watch7.png',
       name: 'Title',
-      price: '1200',
+      price: 1200,
     },
     {
       image: '../../../assets/images/watch6.png',
       name: 'Title',
-      price: '1200',
+      price: 1200,
     },
     {
       image: '../../../assets/images/watch7.png',
       name: 'Title',
-      price: '1200',
+      price: 1200,
     },
   ];
 
@@ -65,5 +68,10 @@ export class MultiItemCarouselComponent implements OnInit {
   }
   ngOnInit() {
     this.slides = this.chunk(this.cards, 4);
+  }
+
+  addProductToCart(product: Product) {
+    console.log('adding product ' + JSON.stringify(product));
+    this.cartService.addProduct(product);
   }
 }
