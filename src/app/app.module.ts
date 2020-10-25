@@ -20,7 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 //services
 import { CarouselService } from './services/carousel.service';
-import { ArrivalService } from './services/arrival.service';
+import { ProductService } from './services/product.service';
 import { TestimonialsService } from './services/testimonials';
 import { MultiCarouselService } from './services/multi-carousel';
 import { ServiceService } from './services/service.service';
@@ -31,6 +31,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { ShopComponent } from './components/shop/shop.component';
 import { OrderComponent } from './components/order/order.component';
 import { CheckOutComponent } from './components/checkout/checkout.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { CheckOutComponent } from './components/checkout/checkout.component';
     CheckOutComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot()],
-  providers: [CarouselService, ArrivalService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
+  providers: [CarouselService, ProductService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

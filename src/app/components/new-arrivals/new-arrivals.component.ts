@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ArrivalService } from 'src/app/services/arrival.service';
-import { Arrivals } from 'src/app/models/arrival';
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
+import { JsonException } from '@angular-devkit/core';
+
 
 @Component({
   selector: 'app-new-arrivals',
@@ -8,13 +11,19 @@ import { Arrivals } from 'src/app/models/arrival';
   styleUrls: ['./new-arrivals.component.scss'],
 })
 export class NewArrivalsComponent implements OnInit {
-  arrivals: Arrivals[];
+  products: Product[];
 
-  constructor(private arrivalService: ArrivalService) {}
+  constructor(private productService: ProductService,
+              private cartService: CartService) {}
 
   ngOnInit() {
-    this.arrivalService.getArrivals().subscribe((arrivals) => {
-      this.arrivals = arrivals;
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
     });
+  }
+
+  addProductToCart(product: Product) {
+    console.log('adding product ' + JSON.stringify(product));
+    this.cartService.addProduct(product);
   }
 }

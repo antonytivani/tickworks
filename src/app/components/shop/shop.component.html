@@ -35,11 +35,11 @@
             </div>
             <div class="row">
               <!-- /womens -->
-              <div class="col-md-2 product-men women_two shop-gd" *ngFor="let arrival of arrivals; let i = index">
+              <div class="col-md-2 product-men women_two shop-gd" *ngFor="let product of products; let i = index">
                 <div class="product-googles-info googles mb-3" *ngIf="i < 18">
                   <div class="men-pro-item">
                     <div class="men-thumb-item">
-                      <img src="{{ arrival.image }}" class="img-fluid" alt="" />
+                      <img src="{{ product.image }}" class="img-fluid" alt="" />
                       <div class="men-cart-pro">
                         <div class="inner-men-cart-pro">
                           <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -52,10 +52,10 @@
                         <div class="grid_meta">
                           <div class="product_price">
                             <h4>
-                              <a href="single.html">{{ arrival.name }}</a>
+                              <a href="single.html">{{ product.name }}</a>
                             </h4>
                             <div class="grid-price mt-2">
-                              <span class="money">{{ arrival.price }}</span>
+                              <span class="money">{{ product.price }}</span>
                             </div>
                           </div>
                           <ul class="stars">

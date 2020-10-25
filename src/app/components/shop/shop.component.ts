@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Arrivals } from 'src/app/models/arrival';
-import { ArrivalService } from 'src/app/services/arrival.service';
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-shop',
@@ -8,13 +8,13 @@ import { ArrivalService } from 'src/app/services/arrival.service';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
-  arrivals: Arrivals[];
+  products: Product[];
 
-  constructor(private arrivalService: ArrivalService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
-    this.arrivalService.getArrivals().subscribe((arrivals) => {
-      this.arrivals = arrivals;
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
     });
   }
 }
