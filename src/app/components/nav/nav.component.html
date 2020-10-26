@@ -54,28 +54,29 @@
       </li>
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect
-          >{{getCartSize()}}<mdb-icon fas icon="cart-arrow-down"></mdb-icon
+          >{{ getCartSize() }}<mdb-icon fas icon="cart-arrow-down"></mdb-icon
         ></a>
         <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
           <div class="shopping-cart">
             <div class="shopping-cart-header">
-              <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{getCartSize()}}</span>
+              <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{ getCartSize() }}</span>
               <div class="shopping-cart-total">
                 <span class="lighter-text">Total:</span>
-                <span class="main-color-text">{{getTotalPrice() | currency: 'R'}}</span>
+                <span class="main-color-text">{{ getTotalPrice() | currency: 'R' }}</span>
               </div>
             </div>
             <!--end shopping-cart-header -->
 
             <ul class="shopping-cart-items" *ngFor="let product of cartItems">
               <li class="clearfix">
-                <img src="{{product.image}}"  />
-                <span class="item-name">{{product.name}}</span>
-                <span class="item-price">{{product.price | currency: 'R'}}</span><br>
-                <span class="item-quantity">Quantity: {{product.quantity}}</span>
+                <img src="{{ product.image }}" />
+                <span class="item-name">{{ product.name }}</span>
+                <span class="item-price">{{ product.price | currency: 'R' }}</span
+                ><br />
+                <span class="item-quantity">Quantity: {{ product.quantity }}</span>
               </li>
             </ul>
-      
+
             <a [routerLink]="['/checkout']" class="button">Checkout</a>
           </div>
           <!--end shopping-cart -->

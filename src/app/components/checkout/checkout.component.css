@@ -201,3 +201,11 @@ p.sub {
 .mt-20 {
   margin-top: 20px;
 }
+
+.remove-icon {
+  font-size: 1.4em;
+  color: #333;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
