@@ -2,41 +2,49 @@
   {
     "image": "../../../assets/images/shop/curren-blue.png",
     "name": "Curren 8355",
-    "price": 799.00
+    "price": 799.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/watch7.png",
     "name": "Curren 8291",
-    "price": 649.00
+    "price": 649.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/watch6.png",
     "name": "Curren 8291",
-    "price": 649.00
+    "price": 649.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/shop/new1-3.png",
     "name": "Curren 8329",
-    "price": 699.00
+    "price": 699.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/shop/winner-new.png",
     "name": "Winner silver",
-    "price": 749.00
+    "price": 749.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/shop/Watch_03.png",
     "name": "Naviforce 9153",
-    "price": 849.00
+    "price": 849.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/shop/watch-4-new.png",
     "name": "Curren 8555 silver",
-    "price": 799.00
+    "price": 799.00,
+    "quantity" : 1
   },
   {
     "image": "../../../assets/images/shop/Watch_05.png",
     "name": "Goldenhour 111",
-    "price": 649.00
+    "price": 649.00,
+    "quantity" : 1
   }
 ]

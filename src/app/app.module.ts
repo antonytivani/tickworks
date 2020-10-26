@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule, TableModule } from 'angular-bootstrap-md';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -54,7 +54,7 @@ import { CartService } from './services/cart.service';
     OrderComponent,
     CheckOutComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot()],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule],
   providers: [CarouselService, ProductService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
   bootstrap: [AppComponent],
 })

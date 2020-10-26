@@ -20,41 +20,49 @@ export class MultiItemCarouselComponent implements OnInit {
       image: '../../../assets/images/shop/leather-belt.png',
       name: 'Tevise',
       price: 999.00,
+      quantity : 1
     },
     {
       image: '../../../assets/images/shop/5.png',
       name: 'Curren 8329',
       price: 699.00,
+      quantity : 1
     },
     {
       image: '../../../assets/images/shop/new-3.png',
       name: 'Curren 8301',
       price: 599.00,
+      quantity : 1
     },
     {
       image: '../../../assets/images/shop/watch_011.png',
       name: 'Curren 000',
       price: 599.00,
+      quantity : 1
     },
     {
       image: '../../../assets/images/watch6.png',
       name: 'Title',
       price: 1200,
+      quantity : 1
     },
     {
       image: '../../../assets/images/watch7.png',
       name: 'Title',
       price: 1200,
+      quantity : 1
     },
     {
       image: '../../../assets/images/watch6.png',
       name: 'Title',
       price: 1200,
+      quantity : 1
     },
     {
       image: '../../../assets/images/watch7.png',
       name: 'Title',
       price: 1200,
+      quantity : 1
     },
   ];
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Product } from 'src/app/models/product';
 
@@ -7,7 +7,7 @@ import { Product } from 'src/app/models/product';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, DoCheck {
 
   cartItems;
 
@@ -17,6 +17,9 @@ export class NavComponent implements OnInit {
     this.cartItems = this.cartService.cart;
   }
 
+  ngDoCheck() {
+    this.cartItems = this.cartService.cart;
+  }
   getCartSize() {
     return this.cartService.cartSize();
   }
