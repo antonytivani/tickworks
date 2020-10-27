@@ -23,7 +23,7 @@ export class NewArrivalsComponent implements OnInit {
   }
 
   addProductToCart(product: Product) {
-    console.log('adding product ' + JSON.stringify(product));
+    // console.log('adding product ' + JSON.stringify(product));
     this.cartService.addProduct(product);
   }
 }

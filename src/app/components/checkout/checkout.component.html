@@ -19,7 +19,7 @@
     <h3 class="tittle-w3layouts text-center my-lg-4 my-4">Checkout</h3>
     <div class="inner_sec">
       <p class="sub text-center mb-lg-5 mb-3">It's time to place your order for your goodies!</p>
-      <table mdbTable striped="true mb-5">
+      <table mdbTable striped="true mb-5" *ngIf="elements.length > 0">
         <thead>
           <tr class="table-header">
             <th *ngFor="let head of headElements" scope="col">{{ head }}</th>
@@ -40,42 +40,36 @@
       </table>
 
       <div class="contact_grid_right">
-        <form action="mailto:info@tickworks.co.za?subject=Order" method="post" enctype="text/plain">
+          <form>
           <div class="row contact_left_grid">
             <div class="col-md-6 con-left">
-              <div class="form-group">
+          <div class="form-group">
                 <label class="my-2">Full name</label>
-                <input class="form-control" type="text" name="Name" placeholder="Full name" required="" />
+                <input class="form-control" type="text" [(ngModel)]="fullname" name="fullname" placeholder="Full name" required="" />
               </div>
               <div class="form-group">
                 <label class="my-2">Contact number</label>
-                <input class="form-control" type="text" name="contact" placeholder="Contact number" required="" />
+                <input class="form-control" type="text" [(ngModel)]="contact" name="contact" placeholder="Contact number" required="" />
               </div>
               <div class="form-group">
                 <label class="my-2">Full address</label>
-                <input class="form-control" type="text" name="address" placeholder="Full address" required="" />
+                <input class="form-control" type="text"[(ngModel)]="address"  name="address" placeholder="Full address" required="" />
               </div>
             </div>
             <div class="col-md-6 con-left">
               <div class="form-group">
                 <label class="my-2">Email address</label>
-                <input class="form-control" type="email" name="email" placeholder="Email address" />
+                <input class="form-control" type="email" [(ngModel)]="clientEmail" name="email" placeholder="Email address" />
               </div>
               <div class="form-group">
                 <label class="my-2">Comment</label>
-                <input class="form-control" type="text" name="comment" placeholder="Comment" />
+                <input class="form-control" type="text" [(ngModel)]="comment" name="comment" placeholder="Comment" />
               </div>
-              <div *ngFor="let product of elements">
-                <input
-                  type="hidden"
-                  name="product required"
-                  value="Product name- {{ product.name }} price - {{ product.price | currency: 'R' }}  quantity - {{
-                    product.quantity
-                  }} "
-                /><br />
-              </div>
+            
               <div class="form-group mt-20">
-                <input class="form-control" type="submit" value="Place order" />
+                <button (click)="placeOrder()" class="form-control">
+                    Place order
+                  </button>
               </div>
             </div>
           </div>

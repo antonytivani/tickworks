@@ -32,6 +32,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { OrderComponent } from './components/order/order.component';
 import { CheckOutComponent } from './components/checkout/checkout.component';
 import { CartService } from './services/cart.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { CartService } from './services/cart.service';
     OrderComponent,
     CheckOutComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule],
   providers: [CarouselService, ProductService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
   bootstrap: [AppComponent],
 })
