@@ -33,6 +33,7 @@ import { OrderComponent } from './components/order/order.component';
 import { CheckOutComponent } from './components/checkout/checkout.component';
 import { CartService } from './services/cart.service';
 import { FormsModule } from '@angular/forms';
+import { EmailService } from './services/email.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { FormsModule } from '@angular/forms';
     CheckOutComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule],
-  providers: [CarouselService, ProductService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
+  providers: [CarouselService, ProductService, EmailService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

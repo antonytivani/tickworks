@@ -58,28 +58,31 @@
         </div>
       </div>
       <div class="contact_grid_right">
-        <form action="#" method="post">
+        <form>
           <div class="row contact_left_grid">
             <div class="col-md-6 con-left">
               <div class="form-group">
                 <label class="my-2">Name</label>
-                <input class="form-control" type="text" name="Name" placeholder="" required="" />
+                <input class="form-control" type="text" [(ngModel)]="name"  name="Name" placeholder="" required="" />
               </div>
               <div class="form-group">
                 <label>Email</label>
-                <input class="form-control" type="email" name="Email" placeholder="" required="" />
+                <input class="form-control" type="email" [(ngModel)]="email"  name="Email" placeholder="" required="" />
               </div>
               <div class="form-group">
                 <label class="my-2">Subject</label>
-                <input class="form-control" type="text" name="Subject" placeholder="" required="" />
+                <input class="form-control" type="text" [(ngModel)]="subject" name="Subject" placeholder="" required="" />
               </div>
             </div>
             <div class="col-md-6 con-right">
               <div class="form-group">
                 <label>Message</label>
-                <textarea id="textarea" placeholder="" required=""></textarea>
+                <textarea id="textarea" type="text" placeholder="" [(ngModel)]="message"  name="message" required=""></textarea>
               </div>
-              <input class="form-control" type="submit" value="Submit" />
+            
+              <button (click)="sendMessage()" class="form-control">
+                  Submit
+                </button>
             </div>
           </div>
         </form>

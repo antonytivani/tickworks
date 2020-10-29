@@ -70,9 +70,9 @@
         </div>
         <div class="footer-text">
           <p>By subscribing to our mailing list you will always get latest products and updates from us.</p>
-          <form action="#" method="post">
-            <input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="" />
-            <button class="btn1">
+          <form>
+            <input class="form-control" type="email" [(ngModel)]="email" name="email" placeholder="Enter your email..." required="" />
+            <button (click)="subscribeToNewsletter()" class="btn1">
               <i class="far fa-envelope" aria-hidden="true"></i>
             </button>
             <div class="clearfix"></div>

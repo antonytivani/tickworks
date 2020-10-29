@@ -2,8 +2,10 @@ import { Component, OnInit, ElementRef, HostListener, AfterViewInit, ViewChild, 
 import { CartService } from 'src/app/services/cart.service';
 
 import { Product } from 'src/app/models/product';
+import { EmailService } from 'src/app/services/email.service';
+import { EmailPayload } from 'src/app/models/email.payload';
+import { MdbCardBodyComponent } from 'projects/angular-bootstrap-md/src/public_api';
 
-declare let Email: any;
 
 @Component({
   selector: 'app-checkout',
@@ -23,7 +25,8 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
   comment;
   subject = 'Order';
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,
+              private emailService: EmailService) {}
 
   ngOnInit() {
     this.elements = this.cartService.cart;
@@ -41,24 +44,25 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
   placeOrder() {
     let order: string = '';
     this.elements.forEach(product => {
-       order += `<b> Product name ${product.name} - price: ${product.price}  - quantity: ${product.quantity} <b> <br/>`;
+       order += `<b> Product name ${product.name} - price: R ${product.price.toFixed(2)}  - quantity: ${product.quantity} <b> <br/>`;
     });
 
-    Email.send({
-      Host : 'smtp.elasticemail.com',
-      Username : '',
-      Password : '',
-      To : '',
-      From : '',
-      Subject : this.subject,
-      Body : `
-      <b>This is sent for an order placed.</b> <br/> 
-      <b>Client Name: </b>${this.fullname} <br /> 
-      <b>Email: </b>${this.clientEmail}<br />  
-      <b>Message:</b> <br /> ${this.comment} <br><br> 
-      ${order} <br/><br/>
-      <b>~End of Message.~</b> `
-      }).then( message => {console.log('email sent'); } );
+    let body =`
+            <b>This is sent for an order placed.</b> <br/> 
+            <b>Client Name: </b>${this.fullname} <br /> 
+            <b>Client Email: </b>${this.clientEmail}<br />  
+            <b>Client contact: </b>${this.contact}<br /> 
+            <b>Address : </b>${this.address }<br />  
+            <b>Message:</b> <br /> ${this.comment} <br><br> 
+            ${order} <br/><br/>
+            <b>~End of Message.~</b> `;
+    let emailPayload: EmailPayload = {
+      subject: this.subject,
+      from: this.clientEmail,
+      body: body,
+    };
+      
+      this.emailService.sendEmail(emailPayload);
       console.log('order placed');
       this.clearCartAndFields();
   }

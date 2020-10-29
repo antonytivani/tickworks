@@ -77,7 +77,10 @@
               </li>
             </ul>
 
-            <a [routerLink]="['/checkout']" class="button">Checkout</a>
+            
+            <button (click)="checkout()"  [disabled]="getCartSize() <= 0" class="form-control">
+                Checkout
+              </button>
           </div>
           <!--end shopping-cart -->
           <!--end container -->
