@@ -15,7 +15,7 @@ export class EmailService {
       Username: 'tony.tivani@gmail.com',
       Password: '6CB0492DEC4B217E69C5603DE14A5A9A3577',
       To: 'tony.tivani@gmail.com',
-      From: payload.from,
+      From: 'tony.tivani@gmail.com',
       Subject: payload.subject,
       Body: payload.body,
     }).then(console.log('email sent'));
