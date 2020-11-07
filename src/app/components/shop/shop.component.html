@@ -18,7 +18,7 @@
 <section class="banner-bottom-wthreelayouts py-lg-5 py-3">
   <div class="container-fluid">
     <div class="inner-sec-shop px-lg-4 px-3">
-      <h3 class="tittle-w3layouts my-lg-4 mt-3">New Arrivals for you</h3>
+      <h3 class="tittle-w3layouts my-lg-4">New Arrivals for you</h3>
       <div class="row">
         <!--/product right-->
         <div class="left-ads-display col-lg-12">
@@ -55,7 +55,7 @@
                               <a href="single.html">{{ product.name }}</a>
                             </h4>
                             <div class="grid-price mt-2">
-                              <span class="money">{{ product.price | currency: 'R'}}</span>
+                              <span class="money">{{ product.price | currency: 'R' }}</span>
                             </div>
                           </div>
                           <ul class="stars">
@@ -87,9 +87,9 @@
                           </ul>
                         </div>
                         <div class="googles single-item hvr-outline-out">
-                            <button (click)="addProductToCart(product)" class="googles-cart pgoogles-cart">
-                              <i class="fas fa-cart-plus"></i>
-                            </button>
+                          <button (click)="addProductToCart(product)" class="googles-cart pgoogles-cart">
+                            <i class="fas fa-cart-plus"></i>
+                          </button>
                         </div>
                       </div>
                       <div class="clearfix"></div>
