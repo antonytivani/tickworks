@@ -29,12 +29,26 @@
           <tr mdbTableCol *ngFor="let product of elements">
             <td>{{ product.name }}</td>
             <td>{{ product.quantity }}</td>
-            <td>{{ product.price | currency: 'R' }}</td>
+            <td>{{ product.price * product.quantity | currency: 'R' }}</td>
             <td>
               <button (click)="removeProductFromCart(product)" class="remove-icon">
                 <mdb-icon far icon="times-circle"></mdb-icon>
               </button>
             </td>
+          </tr>
+          <!-- add Space before column -->
+          <tr mdbTableCol>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr mdbTableCol>
+            <td>Total</td>
+            <td></td>
+            <!-- total not updating after clearing an item from cart -->
+            <td>{{total | currency: 'R'}}</td>
+            <td></td>
           </tr>
         </tbody>
       </table>

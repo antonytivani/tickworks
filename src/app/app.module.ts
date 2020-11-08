@@ -4,6 +4,12 @@ import { MDBBootstrapModule, TableModule } from 'angular-bootstrap-md';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
+// required animations module
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";  
+import { ToastrModule } from "ngx-toastr"; //ToastrModule added
+
+
+
 //components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +23,8 @@ import { TopPicksComponent } from './components/top-picks/top-picks.component';
 import { ServicesComponent } from './components/services/services.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { FooterComponent } from './components/footer/footer.component';
+// import { ModalComponent } from './components/modal/modal.component';
+
 
 //services
 import { CarouselService } from './services/carousel.service';
@@ -34,6 +42,9 @@ import { CheckOutComponent } from './components/checkout/checkout.component';
 import { CartService } from './services/cart.service';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from './services/email.service';
+
+// MODAL
+// import { MDBBootstrapModulesPro, MDBSpinningPreloader} from "ng-uikit-pro-standard";
 
 @NgModule({
   declarations: [
@@ -55,8 +66,10 @@ import { EmailService } from './services/email.service';
     ShopComponent,
     OrderComponent,
     CheckOutComponent,
+    // ModalComponent,
+    
   ],
-  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule, BrowserAnimationsModule, ToastrModule.forRoot()],
   providers: [CarouselService, ProductService, EmailService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
   bootstrap: [AppComponent],
 })

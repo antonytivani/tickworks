@@ -1001,6 +1001,7 @@ span.item_price {
 
 .product-men img {
   width: 100%;
+  // margin-bottom: -0.3em;
 }
 
 .grid_meta {
@@ -1546,6 +1547,8 @@ span.item_price {
 }
 
 @media (max-width: 600px) {
+
+  
   .colr {
     width: 47.333%;
     float: left;

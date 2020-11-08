@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="contact_grid_right">
-        <form>
+        <form #contactForm="ngForm">
           <div class="row contact_left_grid">
             <div class="col-md-6 con-left">
               <div class="form-group">
@@ -80,7 +80,7 @@
                 <textarea id="textarea" type="text" placeholder="" [(ngModel)]="message"  name="message" required=""></textarea>
               </div>
             
-              <button (click)="sendMessage()" class="form-control">
+              <button [disabled]="!contactForm.form.valid" (click)="sendMessage()" class="form-control">
                   Submit
                 </button>
             </div>

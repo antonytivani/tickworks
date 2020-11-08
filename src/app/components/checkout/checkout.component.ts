@@ -1,9 +1,10 @@
 import { Component, OnInit, ElementRef, HostListener, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-
+import { Router } from "@angular/router";
 import { Product } from 'src/app/models/product';
 import { EmailService } from 'src/app/services/email.service';
 import { EmailPayload } from 'src/app/models/email.payload';
+import { ToastrService } from "ngx-toastr";
 import { MdbCardBodyComponent } from 'projects/angular-bootstrap-md/src/public_api';
 
 
@@ -16,6 +17,7 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
 
   elements: Product[] = [];
   headElements = ['Product name',  'Quantity', 'Price', 'Remove'];
+  total: Number
 
   fullname;
   contact;
@@ -26,10 +28,13 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
   subject = 'Order';
 
   constructor(private cartService: CartService,
-              private emailService: EmailService) {}
+              private emailService: EmailService,
+              private toaster: ToastrService,
+              private router: Router) {}
 
   ngOnInit() {
     this.elements = this.cartService.cart;
+    this.total = this.cartService.total
   }
 
   ngAfterViewInit() {
@@ -38,7 +43,16 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
 
   removeProductFromCart(product: Product) {
     this.cartService.removeProduct(product);
+    this.showSucess(`${product.name} removed from cart`)
     this.elements = this.cartService.cart;
+    
+    // navigate to home if products list is empty 
+    if (this.elements.length === 0) {
+      console.log("navigating back to home");
+      
+      this.router.navigate(['/'])
+    }
+
   }
 
   placeOrder() {
@@ -62,9 +76,12 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
       body: body,
     };
       
+      this.showSucess("order successfull")
       this.emailService.sendEmail(emailPayload);
       console.log('order placed');
       this.clearCartAndFields();
+      // navigate to homepage 
+      this.router.navigate(['/'])
   }
 
   clearCartAndFields() {
@@ -76,5 +93,9 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
     this.comment = '';
     this.cartService.cart = [];
     this.elements = [];
+  }
+
+  showSucess(msg: string){
+    this.toaster.success(msg.toUpperCase())
   }
 }

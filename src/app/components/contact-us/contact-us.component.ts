@@ -1,6 +1,8 @@
+import { ToastrService } from "ngx-toastr";
 import { Component, OnInit } from '@angular/core';
 import { EmailService } from 'src/app/services/email.service';
 import { EmailPayload } from 'src/app/models/email.payload';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-contact-us',
@@ -9,13 +11,16 @@ import { EmailPayload } from 'src/app/models/email.payload';
 })
 export class ContactUsComponent implements OnInit {
 
-  name;
-  email;
-  subject;
-  message;
+  name = "placeholder";
+  email = "john@doe.test";
+  subject = 'Lorem ipsum dolor sit'
+  
+  message = "amet consectetur adipisicing elit. Eius consectetur soluta voluptates cumque delectus, pariatur sequi, perspiciatis dignissimos at reiciendis beatae esse ea facilis nulla culpa et rem dicta adipisci."
 
-  constructor(private emailService: EmailService) {}
-
+  constructor(private emailService: EmailService,
+              private toaster: ToastrService,
+              private router: Router ) {}
+  
   ngOnInit(): void {}
 
   sendMessage() {
@@ -31,7 +36,9 @@ export class ContactUsComponent implements OnInit {
       body: body,
     };
       
-      this.emailService.sendEmail(emailPayload);
+      this.emailService.sendEmail(emailPayload)
+      this.showSucess('messege sent');
+      this.router.navigate(['/'])
       console.log('Contact us requested');
       this.clearFields();
   }
@@ -42,4 +49,9 @@ export class ContactUsComponent implements OnInit {
     this.subject = '';
     this.message = '';
   }
+
+  showSucess(msg: string){
+      this.toaster.success(msg.toUpperCase())
+  }
 }
+

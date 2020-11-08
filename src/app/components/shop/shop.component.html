@@ -35,14 +35,14 @@
             </div>
             <div class="row">
               <!-- /womens -->
-              <div class="col-md-2 product-men women_two shop-gd" *ngFor="let product of products; let i = index">
+              <div class="col-md-3 product-men women_two shop-gd" *ngFor="let product of products; let i = index">
                 <div class="product-googles-info googles mb-3" *ngIf="i < 18">
                   <div class="men-pro-item">
                     <div class="men-thumb-item">
                       <img src="{{ product.image }}" class="img-fluid" alt="" />
                       <div class="men-cart-pro">
                         <div class="inner-men-cart-pro">
-                          <a href="single.html" class="link-product-add-cart">Quick View</a>
+                          <a role="button" (click)="addProductToCart(product)" class="link-product-add-cart">add to cart</a>
                         </div>
                       </div>
                       <span class="product-new-top">New</span>

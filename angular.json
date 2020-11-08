@@ -34,7 +34,8 @@
               "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
@@ -191,5 +192,8 @@
       }
     }
   },
-  "defaultProject": "angular-bootstrap-md-app"
+  "defaultProject": "angular-bootstrap-md-app",
+  "cli": {
+    "analytics": "6058c451-1500-4153-8005-e56cd8cf80a8"
+  }
 }

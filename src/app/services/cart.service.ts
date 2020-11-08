@@ -19,6 +19,7 @@ export class CartService {
   
   }
 
+  
   cartSize() {
     return this.cart.length;
   }
