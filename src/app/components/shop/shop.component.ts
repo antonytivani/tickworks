@@ -11,6 +11,7 @@ import { ToastrService } from "ngx-toastr";
 })
 export class ShopComponent implements OnInit {
   products: Product[];
+  currentProduct: Product
 
   constructor(private productService: ProductService,
               private toastr: ToastrService,
@@ -30,5 +31,9 @@ export class ShopComponent implements OnInit {
 
   showSucess(msg: string){
     this.toastr.success(msg.toUpperCase())
+  }
+  setCurProduct(curProd: Product){
+    this.currentProduct = curProd
+    console.log(this.currentProduct);  
   }
 }

@@ -3,7 +3,6 @@ import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { ToastrService } from "ngx-toastr";
-import { ModalDirective } from 'angular-bootstrap-md'; 
 
 import { JsonException } from '@angular-devkit/core'
 
@@ -17,12 +16,11 @@ export class NewArrivalsComponent implements OnInit {
 
   products: Product[];
   
-  @ViewChild(ModalDirective) basicModal: ModalDirective;
+  //
   
   // track currect product
-  product: Product
+  currentProduct: Product
   imageUri: String
-  selected: number
 
   constructor(private productService: ProductService,
               private cartService: CartService,
@@ -39,22 +37,26 @@ export class NewArrivalsComponent implements OnInit {
   }
 
   setCurProduct(curProd: Product){
-    this.product = curProd;
-    this.basicModal.show()
-    this.imageUri = this.product.image
+    this.currentProduct = curProd
+    // 
+    // this.imageUri = this.product.image
+    console.log(this.currentProduct);
+
+    console.log('curProd exist');
+    
+    
     
   }
 
-  addProductToCart(product: Product) {
-    this.cartService.addProduct(product);
-    this.showSuccess(`${product.name} added to cart`)
-    this.basicModal.hide()
-  }
+  // addProductToCart(product: Product) {
+  //   this.cartService.addProduct(product);
+  //   this.showSuccess(`${product.name} added to cart`)
+  //   // this.basicModal.hide()
+  // }
 
-  // incr product.quantity if change event detected on select element
   handleSelectChange(e){
-    this.product.quantity = e.target.options.selectedIndex    
-    this.selected = e.target.options.selectedIndex
+    // this.product.quantity = e.target.options.selectedIndex    
+    // this.selected = e.target.options.selectedIndex
   }
 
   showSuccess(msg: string){

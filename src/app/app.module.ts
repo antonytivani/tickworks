@@ -23,7 +23,7 @@ import { TopPicksComponent } from './components/top-picks/top-picks.component';
 import { ServicesComponent } from './components/services/services.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { FooterComponent } from './components/footer/footer.component';
-// import { ModalComponent } from './components/modal/modal.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 //services
@@ -66,7 +66,7 @@ import { EmailService } from './services/email.service';
     ShopComponent,
     OrderComponent,
     CheckOutComponent,
-    // ModalComponent,
+    ModalComponent,
     
   ],
   imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule, BrowserAnimationsModule, ToastrModule.forRoot()],

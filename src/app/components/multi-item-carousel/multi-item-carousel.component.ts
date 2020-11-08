@@ -11,6 +11,8 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class MultiItemCarouselComponent implements OnInit {
   // cards: MultiCarousel[];
+  
+  currentProduct: Product
 
   constructor(private multiCarouselService: MultiCarouselService,
               private cartService: CartService) {}
@@ -77,9 +79,9 @@ export class MultiItemCarouselComponent implements OnInit {
   ngOnInit() {
     this.slides = this.chunk(this.cards, 4);
   }
-
-  addProductToCart(product: Product) {
-    console.log('adding product ' + JSON.stringify(product));
-    this.cartService.addProduct(product);
+  
+  setCurProduct(curProd: Product){
+    this.currentProduct = curProd
   }
+
 }

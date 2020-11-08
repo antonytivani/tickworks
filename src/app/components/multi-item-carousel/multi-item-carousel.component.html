@@ -13,7 +13,7 @@
               <img src="{{ product.image }}" class="img-fluid" alt="" />
               <div class="men-cart-pro">
                 <div class="inner-men-cart-pro">
-                  <a href="single.html" class="link-product-add-cart">add to cart</a>
+                  <a (click)="setCurProduct(product)" class="link-product-add-cart">add to cart</a>
                 </div>
               </div>
               <span class="product-new-top">New</span>
@@ -58,7 +58,7 @@
                   </ul>
                 </div>
                 <div class="googles single-item hvr-outline-out">
-                    <button (click)="addProductToCart(product)" class="googles-cart pgoogles-cart">
+                    <button (click)="setCurProduct(product)" class="googles-cart pgoogles-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                 </div>
@@ -71,3 +71,5 @@
     </div>
   </mdb-carousel-item>
 </mdb-carousel>
+
+<app-modal [product]="currentProduct"></app-modal>

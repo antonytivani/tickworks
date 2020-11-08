@@ -1,16 +1,58 @@
-import { Component, OnInit } from '@angular/core';
-import { MDBModalRef } from "ng-uikit-pro-standard";
+import { Component, OnInit, OnChanges, Input, ViewChild } from '@angular/core';
+// import { MDBModalRef } from "ng-uikit-pro-standard";
+
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
+import { ToastrService } from "ngx-toastr";
+import { inputNames } from '@angular/cdk/schematics';
+
+import { ModalDirective } from 'angular-bootstrap-md'; 
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, OnChanges {
+  
+  selected: number
 
-  constructor(public modalRef: MDBModalRef) { }
+  @Input() product: Product;
+  @ViewChild(ModalDirective) basicModal: ModalDirective;
 
-  ngOnInit(): void {
+
+  constructor(private productService: ProductService,
+              private cartService: CartService,
+              private toastr: ToastrService,) { }
+
+  ngOnInit(): void {}
+
+  // ?????????????????????????
+  ngOnChanges(): void {
+    if (this.product) {
+      this.basicModal.show()
+    }
+  }
+  // ???????????????????????????
+
+  addProductToCart(product: Product) {
+    this.cartService.addProduct(product);
+    this.showSuccess(`${product.name} added to cart`)
+    this.basicModal.hide()
   }
 
+  // incr product.quantity if change event detected on select element
+  handleSelectChange(e){
+    this.product.quantity = e.target.options.selectedIndex    
+    this.selected = e.target.options.selectedIndex
+  }
+
+  showSuccess(msg: string){
+    this.toastr.success(msg.toUpperCase())
+  }
+
+  // showModal(): boolean{
+  //   return this.product ? true : false
+  // }
 }
