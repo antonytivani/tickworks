@@ -43,13 +43,18 @@
 
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link" href="www.facebook.com" target="blank">
+        <a class="nav-link" href="https://www.facebook.com/tickworks" target="_blank">
           <mdb-icon fab icon="facebook"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="https://twitter.com/tickworks1" target="_blank">
           <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.instagram.com/tick_works" target="_blank">
+          <mdb-icon fab icon="instagram"></mdb-icon>
         </a>
       </li>
       <li class="nav-item dropdown" dropdown>
@@ -77,10 +82,7 @@
               </li>
             </ul>
 
-            
-            <button (click)="checkout()"  [disabled]="getCartSize() <= 0" class="form-control">
-                Checkout
-              </button>
+            <button (click)="checkout()" [disabled]="getCartSize() <= 0" class="form-control">Checkout</button>
           </div>
           <!--end shopping-cart -->
           <!--end container -->

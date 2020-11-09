@@ -18,12 +18,12 @@
               </a>
             </li>
             <li class="mx-2">
-              <a href="#">
+              <a href="https://twitter.com/tickworks1" target="_blank">
                 <span class="fab fa-twitter"></span>
               </a>
             </li>
             <li class="mx-2">
-              <a href="#">
+              <a href="https://www.instagram.com/tick_works" target="_blank">
                 <span class="fab fa-instagram"></span>
               </a>
             </li>
@@ -70,15 +70,16 @@
         </div>
         <div class="footer-text">
           <p>By subscribing to our mailing list you will always get latest products and updates from us.</p>
-    
+
           <form #signupForm="ngForm">
-            <input class="form-control" 
-                  type="email" 
-                  [(ngModel)]="email" 
-                  name="email" 
-                  placeholder="Enter your email..." 
-                  required=""
-                  pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" 
+            <input
+              class="form-control"
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="Enter your email..."
+              required=""
+              pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
             />
             <button [disabled]="!signupForm.form.valid" (click)="subscribeToNewsletter()" class="btn1">
               <i class="far fa-envelope" aria-hidden="true"></i>
