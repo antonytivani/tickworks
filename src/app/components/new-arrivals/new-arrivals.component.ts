@@ -15,20 +15,13 @@ import { JsonException } from '@angular-devkit/core'
 export class NewArrivalsComponent implements OnInit {
 
   products: Product[];
-  
-  //
-  
+
   // track currect product
   currentProduct: Product
-  imageUri: String
 
   constructor(private productService: ProductService,
               private cartService: CartService,
-              private toastr: ToastrService,
-              
-              ) {
-
-              }
+              private toastr: ToastrService) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
@@ -37,31 +30,11 @@ export class NewArrivalsComponent implements OnInit {
   }
 
   setCurProduct(curProd: Product){
-    this.currentProduct = curProd
-    // 
-    // this.imageUri = this.product.image
-    console.log(this.currentProduct);
-
-    console.log('curProd exist');
-    
-    
-    
-  }
-
-  // addProductToCart(product: Product) {
-  //   this.cartService.addProduct(product);
-  //   this.showSuccess(`${product.name} added to cart`)
-  //   // this.basicModal.hide()
-  // }
-
-  handleSelectChange(e){
-    // this.product.quantity = e.target.options.selectedIndex    
-    // this.selected = e.target.options.selectedIndex
+    this.currentProduct = curProd    
   }
 
   showSuccess(msg: string){
     this.toastr.success(msg.toUpperCase())
   }
 
-  
 }
