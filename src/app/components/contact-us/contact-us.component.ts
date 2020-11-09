@@ -38,9 +38,11 @@ export class ContactUsComponent implements OnInit {
       
       this.emailService.sendEmail(emailPayload)
       this.showSucess('messege sent');
+      window.scrollTo(0,0)
       this.router.navigate(['/'])
       console.log('Contact us requested');
       this.clearFields();
+
   }
 
   clearFields() {

@@ -1,3 +1,4 @@
+import { ToastrService } from "ngx-toastr";
 import { Component, OnInit } from '@angular/core';
 import { EmailService } from 'src/app/services/email.service';
 import { EmailPayload } from 'src/app/models/email.payload';
@@ -8,10 +9,11 @@ import { EmailPayload } from 'src/app/models/email.payload';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
+  
   email;
-
-  constructor(private emailService: EmailService) { }
+  
+  constructor(private emailService: EmailService, 
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -32,10 +34,17 @@ export class FooterComponent implements OnInit {
     this.emailService.sendEmail(emailPayload);
     console.log('subscribed to newsletter');
     this.clearFields();
+
+    this.showSuccess('subscribed to news letter')
+    window.scrollTo(0, 0)
   }
   
   clearFields() {
     this.email = '';
   }
 
+  // toaster
+  showSuccess(msg: string){
+    this.toastr.success(msg.toUpperCase())
+  }
 }
