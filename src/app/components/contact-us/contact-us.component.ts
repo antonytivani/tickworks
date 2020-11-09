@@ -1,8 +1,8 @@
-import { ToastrService } from "ngx-toastr";
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
 import { EmailService } from 'src/app/services/email.service';
 import { EmailPayload } from 'src/app/models/email.payload';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,21 +10,17 @@ import { Router } from "@angular/router";
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent implements OnInit {
+  name = '';
+  email = '';
+  subject = '';
+  message = '';
 
-  name = "placeholder";
-  email = "john@doe.test";
-  subject = 'Lorem ipsum dolor sit'
-  
-  message = "amet consectetur adipisicing elit. Eius consectetur soluta voluptates cumque delectus, pariatur sequi, perspiciatis dignissimos at reiciendis beatae esse ea facilis nulla culpa et rem dicta adipisci."
+  constructor(private emailService: EmailService, private toaster: ToastrService, private router: Router) {}
 
-  constructor(private emailService: EmailService,
-              private toaster: ToastrService,
-              private router: Router ) {}
-  
   ngOnInit(): void {}
 
   sendMessage() {
-    let body =`
+    let body = `
             <b>This is sent from contact us page.</b> <br/> 
             <b>Client Name: </b>${this.name} <br /> 
             <b>Client Email: </b>${this.email}<br />  
@@ -52,8 +48,7 @@ export class ContactUsComponent implements OnInit {
     this.message = '';
   }
 
-  showSucess(msg: string){
-      this.toaster.success(msg.toUpperCase())
+  showSucess(msg: string) {
+    this.toaster.success(msg.toUpperCase());
   }
 }
-
