@@ -47,43 +47,70 @@
             <td>Total</td>
             <td></td>
             <!-- total not updating after clearing an item from cart -->
-            <td>{{total | currency: 'R'}}</td>
+            <td>{{ total | currency: 'R' }}</td>
             <td></td>
           </tr>
         </tbody>
       </table>
 
       <div class="contact_grid_right">
-          <form #checkoutForm="ngForm">
+        <form #checkoutForm="ngForm">
           <div class="row contact_left_grid">
             <div class="col-md-6 con-left">
-          <div class="form-group">
+              <div class="form-group">
                 <label class="my-2">Full name</label>
-                <input class="form-control" type="text" [(ngModel)]="fullname" name="fullname" minlength="3" maxlength="32" placeholder="Full name" required="" />
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="fullname"
+                  name="fullname"
+                  minlength="3"
+                  maxlength="32"
+                  placeholder="Full name"
+                  required=""
+                />
               </div>
               <div class="form-group">
                 <label class="my-2">Contact number</label>
-                <input class="form-control" type="text" [(ngModel)]="contact" name="contact" minlength="10" placeholder="Contact number" required="" />
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="contact"
+                  name="contact"
+                  minlength="10"
+                  placeholder="Contact number"
+                  required=""
+                />
               </div>
               <div class="form-group">
                 <label class="my-2">Full address</label>
-                <input class="form-control" type="text"[(ngModel)]="address"  name="address" placeholder="Full address" required="" />
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="address"
+                  name="address"
+                  placeholder="Full address"
+                  required=""
+                />
               </div>
             </div>
             <div class="col-md-6 con-left">
               <div class="form-group">
                 <label class="my-2">Email address</label>
-                <input class="form-control" type="email" [(ngModel)]="clientEmail" name="clientEmail" placeholder="Email address" />
+                <input
+                  class="form-control"
+                  type="email"
+                  [(ngModel)]="clientEmail"
+                  name="clientEmail"
+                  placeholder="Email address"
+                />
               </div>
               <div class="form-group">
                 <label class="my-2">Comment</label>
                 <input class="form-control" type="text" [(ngModel)]="comment" name="comment" placeholder="Comment" />
               </div>
-            
               <div class="form-group mt-20">
-                <button [disabled]="!checkoutForm.form.valid" (click)="placeOrder()" class="form-control">
-                    Place order
-                  </button>
+                <button (click)="placeOrder()" class="form-control">Place order</button>
               </div>
             </div>
           </div>
