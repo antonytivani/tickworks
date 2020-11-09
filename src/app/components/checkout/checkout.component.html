@@ -67,7 +67,7 @@
                   minlength="3"
                   maxlength="32"
                   placeholder="Full name"
-                  required=""
+                  required
                 />
               </div>
               <div class="form-group">
@@ -79,7 +79,7 @@
                   name="contact"
                   minlength="10"
                   placeholder="Contact number"
-                  required=""
+                  required
                 />
               </div>
               <div class="form-group">
@@ -90,7 +90,7 @@
                   [(ngModel)]="address"
                   name="address"
                   placeholder="Full address"
-                  required=""
+                  required
                 />
               </div>
             </div>
@@ -110,7 +110,7 @@
                 <input class="form-control" type="text" [(ngModel)]="comment" name="comment" placeholder="Comment" />
               </div>
               <div class="form-group mt-20">
-                <button (click)="placeOrder()" class="form-control">Place order</button>
+                <button [disabled]="!checkoutForm.form.valid" (click)="placeOrder()" class="form-control">Place order</button>
               </div>
             </div>
           </div>
