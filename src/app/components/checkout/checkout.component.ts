@@ -34,7 +34,7 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
 
   ngOnInit() {
     this.elements = this.cartService.cart;
-    this.total = this.cartService.total
+    this.total = this.cartService.totalCartPrice()
   }
 
   ngAfterViewInit() {
@@ -45,11 +45,10 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
     this.cartService.removeProduct(product);
     this.showSucess(`${product.name} removed from cart`)
     this.elements = this.cartService.cart;
+    this.total = this.cartService.totalCartPrice()
     
     // navigate to home if products list is empty 
     if (this.elements.length === 0) {
-      console.log("navigating back to home");
-      
       this.router.navigate(['/'])
     }
 
@@ -80,6 +79,7 @@ export class CheckOutComponent implements OnInit, AfterViewInit  {
       this.emailService.sendEmail(emailPayload);
       console.log('order placed');
       this.clearCartAndFields();
+      
       // navigate to homepage 
       this.router.navigate(['/'])
   }
