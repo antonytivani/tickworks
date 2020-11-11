@@ -15,6 +15,10 @@ html{
   scroll-behavior: smooth;
 }
 
+input.ng-invalid.ng-touched {
+  border-color: #FA787E !important;
+}
+
 .unique-color {
   background-color: #f60d0f !important;
 }
