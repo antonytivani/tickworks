@@ -31,13 +31,12 @@ export class ContactUsComponent implements OnInit {
       from: this.email,
       body: body,
     };
-      
-      this.emailService.sendEmail(emailPayload)
-      this.showSucess('messege sent');
-      this.router.navigate(['/'])
-      console.log('Contact us requested');
-      this.clearFields();
 
+    this.emailService.sendEmail(emailPayload);
+    this.showSucess('');
+    this.router.navigate(['/']);
+    // console.log('Contact us requested');
+    this.clearFields();
   }
 
   clearFields() {
@@ -48,6 +47,6 @@ export class ContactUsComponent implements OnInit {
   }
 
   showSucess(msg: string) {
-    this.toaster.success(msg.toUpperCase());
+    this.toaster.success('messege sent', msg.toUpperCase(), { closeButton: true });
   }
 }

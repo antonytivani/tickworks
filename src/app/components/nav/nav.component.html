@@ -10,29 +10,41 @@
   <links>
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="nav-link waves-light" mdbWavesEffect
+      <li class="nav-item">
+        <a
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link waves-light"
+          mdbWavesEffect
           >Home<span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
         <a
           [routerLink]="['/about-us']"
-          routerLinkActive="router-link-active"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
           class="nav-link waves-light"
           mdbWavesEffect
           >About us</a
         >
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/shop']" routerLinkActive="router-link-active" class="nav-link waves-light" mdbWavesEffect
+        <a
+          [routerLink]="['/shop']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link waves-light"
+          mdbWavesEffect
           >Shop</a
         >
       </li>
       <li class="nav-item">
         <a
           [routerLink]="['/contact-us']"
-          routerLinkActive="router-link-active"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
           class="nav-link waves-light"
           mdbWavesEffect
           >contact us</a

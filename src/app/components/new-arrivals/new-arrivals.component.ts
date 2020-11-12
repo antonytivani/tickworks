@@ -2,10 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-import { ToastrService } from "ngx-toastr";
-
-import { JsonException } from '@angular-devkit/core'
-
+import { JsonException } from '@angular-devkit/core';
 
 @Component({
   selector: 'app-new-arrivals',
@@ -13,15 +10,12 @@ import { JsonException } from '@angular-devkit/core'
   styleUrls: ['./new-arrivals.component.scss'],
 })
 export class NewArrivalsComponent implements OnInit {
-
   products: Product[];
 
   // track currect product
-  currentProduct: Product
+  currentProduct: Product;
 
-  constructor(private productService: ProductService,
-              private cartService: CartService,
-              private toastr: ToastrService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
@@ -29,12 +23,7 @@ export class NewArrivalsComponent implements OnInit {
     });
   }
 
-  setCurProduct(curProd: Product){
-    this.currentProduct = curProd    
+  setCurProduct(curProd: Product) {
+    this.currentProduct = curProd;
   }
-
-  showSuccess(msg: string){
-    this.toastr.success(msg.toUpperCase())
-  }
-
 }

@@ -87,9 +87,9 @@ export class CheckOutComponent implements OnInit, AfterViewInit {
       body: body,
     };
 
-    this.showSucess('order successfull');
+    this.showSucess('');
     this.emailService.sendEmail(emailPayload);
-    console.log('order placed');
+    // console.log('order placed');
     this.clearCartAndFields();
 
     // navigate to homepage
@@ -108,6 +108,6 @@ export class CheckOutComponent implements OnInit, AfterViewInit {
   }
 
   showSucess(msg: string) {
-    this.toaster.success(msg.toUpperCase());
+    this.toaster.success('order successfull', msg.toUpperCase(), { closeButton: true });
   }
 }

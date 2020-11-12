@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-import { ToastrService } from "ngx-toastr";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-shop',
@@ -11,11 +11,13 @@ import { ToastrService } from "ngx-toastr";
 })
 export class ShopComponent implements OnInit {
   products: Product[];
-  currentProduct: Product
+  currentProduct: Product;
 
-  constructor(private productService: ProductService,
-              private toastr: ToastrService,
-              private cartService: CartService) {}
+  constructor(
+    private productService: ProductService,
+    private toastr: ToastrService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
@@ -24,16 +26,15 @@ export class ShopComponent implements OnInit {
   }
 
   addProductToCart(product: Product) {
-    console.log('adding product ' + JSON.stringify(product));
     this.cartService.addProduct(product);
-    this.showSucess(`${product.name} added to cart`)
+    this.showSucess(`${product.name}`);
   }
 
-  showSucess(msg: string){
-    this.toastr.success(msg.toUpperCase())
+  showSucess(msg: string) {
+    this.toastr.success('added to cart', msg.toUpperCase(), { closeButton: true });
   }
-  setCurProduct(curProd: Product){
-    this.currentProduct = curProd
-    console.log(this.currentProduct);  
+  setCurProduct(curProd: Product) {
+    this.currentProduct = curProd;
+    console.log(this.currentProduct);
   }
 }
