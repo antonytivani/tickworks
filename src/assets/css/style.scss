@@ -2024,6 +2024,17 @@ ul.links li a:hover {
   }
 }
 
+.sendMail-btn {
+  background-color: #ff4e00;
+  border-color: #ff4e00;
+  color: #fff;
+  &:disabled {
+    background-color: pink;
+    border-color: pink;
+    cursor: not-allowed;
+  }
+}
+
 @media (max-width: 900px) {
   .top-info h6 {
     letter-spacing: 1px;

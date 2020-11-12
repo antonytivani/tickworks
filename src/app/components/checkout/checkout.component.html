@@ -36,16 +36,9 @@
               </button>
             </td>
           </tr>
-          <!-- add Space before column -->
-          <tr mdbTableCol>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
           <tr mdbTableCol>
             <td>Total</td>
-            <td></td>
+            <td>{{ totalQuantity }}</td>
             <!-- total not updating after clearing an item from cart -->
             <td>{{ total | currency: 'R' }}</td>
             <td></td>
@@ -110,7 +103,9 @@
                 <input class="form-control" type="text" [(ngModel)]="comment" name="comment" placeholder="Comment" />
               </div>
               <div class="form-group mt-20">
-                <button [disabled]="!checkoutForm.form.valid" (click)="placeOrder()" class="form-control">Place order</button>
+                <button [disabled]="!checkoutForm.form.valid" (click)="placeOrder()" class="form-control sendMail-btn">
+                  Place order
+                </button>
               </div>
             </div>
           </div>
