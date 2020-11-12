@@ -2028,10 +2028,24 @@ ul.links li a:hover {
   background-color: #ff4e00;
   border-color: #ff4e00;
   color: #fff;
+  padding: 15px 0 35px 0;
+  display: inline-block;
   &:disabled {
     background-color: pink;
     border-color: pink;
     cursor: not-allowed;
+  }
+}
+
+app-contact-us {
+  .sendMail-btn {
+    margin-top: 8px !important;
+  }
+}
+
+app-checkout {
+  .sendMail-btn {
+    margin-top: 32px !important;
   }
 }
 
