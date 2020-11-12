@@ -3,18 +3,18 @@
     "name": "Anthony",
     "type": "customer",
     "region": "Gauteng",
-    "message": "lorem xxxx..."
+    "message": "I’m so glad I decided to shop from Tickworks."
   },
   {
     "name": "Joyce",
     "type": "customer",
-    "region": "Gauteng",
-    "message": "lorem xxxx..."
+    "region": "Cape Town",
+    "message": "You guys truly kick ass. Thanks for being so awesome."
   },
   {
     "name": "Bongani",
     "type": "customer",
     "region": "Gauteng",
-    "message": "lorem xxxx..."
+    "message": "My new watch rocks, High fives!"
   }
 ]

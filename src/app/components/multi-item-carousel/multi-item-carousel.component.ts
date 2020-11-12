@@ -11,60 +11,59 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class MultiItemCarouselComponent implements OnInit {
   // cards: MultiCarousel[];
-  
-  currentProduct: Product
 
-  constructor(private multiCarouselService: MultiCarouselService,
-              private cartService: CartService) {}
+  currentProduct: Product;
+
+  constructor(private multiCarouselService: MultiCarouselService, private cartService: CartService) {}
 
   cards = [
     {
       image: '../../../assets/images/shop/leather-belt.png',
       name: 'Tevise',
-      price: 999.00,
-      quantity : 1
+      price: 999.0,
+      quantity: 1,
     },
     {
       image: '../../../assets/images/shop/5.png',
       name: 'Curren 8329',
-      price: 699.00,
-      quantity : 1
+      price: 699.0,
+      quantity: 1,
     },
     {
       image: '../../../assets/images/shop/new-3.png',
       name: 'Curren 8301',
-      price: 599.00,
-      quantity : 1
+      price: 599.0,
+      quantity: 1,
     },
     {
       image: '../../../assets/images/shop/watch_011.png',
       name: 'Curren 000',
-      price: 599.00,
-      quantity : 1
+      price: 599.0,
+      quantity: 1,
     },
     {
-      image: '../../../assets/images/watch6.png',
+      image: '../../../assets/images/shop/watch6.png',
       name: 'Title',
       price: 1200,
-      quantity : 1
+      quantity: 1,
     },
     {
-      image: '../../../assets/images/watch7.png',
+      image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
       price: 1200,
-      quantity : 1
+      quantity: 1,
     },
     {
-      image: '../../../assets/images/watch6.png',
+      image: '../../../assets/images/shop/watch6.png',
       name: 'Title',
       price: 1200,
-      quantity : 1
+      quantity: 1,
     },
     {
-      image: '../../../assets/images/watch7.png',
+      image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
       price: 1200,
-      quantity : 1
+      quantity: 1,
     },
   ];
 
@@ -79,9 +78,8 @@ export class MultiItemCarouselComponent implements OnInit {
   ngOnInit() {
     this.slides = this.chunk(this.cards, 4);
   }
-  
-  setCurProduct(curProd: Product){
-    this.currentProduct = curProd
-  }
 
+  setCurProduct(curProd: Product) {
+    this.currentProduct = curProd;
+  }
 }

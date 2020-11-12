@@ -1,55 +1,52 @@
 <!-- <section *ngIf="product"> -->
 
-
 <div
-mdbModal
-#basicModal="mdbModal"
-class="modal fade"
-tabindex="-1"
-role="dialog"
-aria-labelledby="myBasicModalLabel"
-aria-hidden="true"
+  mdbModal
+  #basicModal="mdbModal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myBasicModalLabel"
+  aria-hidden="true"
+>
+  <!-- {{basicModal.show()}} -->
 
-> 
-<!-- {{basicModal.show()}} -->
-
-<div class="modal-dialog cascading-modal modal-avatar modal-md" role="document">
-
-  <div class="modal-content">
-    
-    <div class="modal-header">
-      <img src="{{product ? product.image : ''}}" alt="avatar" class="rounded-circle img-responsive" />
-    </div>
-    <div class="modal-body mb-1">
-      <!--  -->
-      <h5 class="mt-1 mb-2 text-center">Add to cart</h5>
-      <div class="md-form ml-0 mr-0">
-        <select ([value])="selected" (change)='handleSelectChange($event)' class="browser-default custom-select">
-          <option selected>Number of items</option>
-          <option value="1" >1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
+  <div class="modal-dialog cascading-modal modal-avatar modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="{{ product ? product.image : '' }}" alt="avatar" class="rounded-circle img-responsive" />
       </div>
-      <div class="text-center mt-4">
-        <button
-          mdbBtn
-          color="red"
-          rounded="true"
-          class="mt-1 waves-light"
-          mdbWavesEffect
-          (click)="basicModal.hide()"
-        >
-          Cancel
-          <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
-        </button>
-        <button mdbBtn [disabled]="!selected" (click)="addProductToCart(product)" color="cyan" rounded="true"  class="mt-1 waves-light" mdbWavesEffect>
-          Add
-          <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
-        </button>
+      <div class="modal-body mb-1">
+        <!--  -->
+        <h5 class="mt-1 mb-2 text-center">Add to cart</h5>
+        <div class="md-form ml-0 mr-0">
+          <select ([value])="(selected)" (change)="handleSelectChange($event)" class="browser-default custom-select">
+            <option selected>Number of items</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="text-center mt-4 mb-4">
+          <button mdbBtn color="red" rounded="true" class="mt-1 waves-light" mdbWavesEffect (click)="basicModal.hide()">
+            Cancel
+            <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
+          </button>
+          <button
+            mdbBtn
+            [disabled]="!selected"
+            (click)="addProductToCart(product)"
+            color="cyan"
+            rounded="true"
+            class="mt-1 waves-light"
+            mdbWavesEffect
+          >
+            Add
+            <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <!-- </section> -->

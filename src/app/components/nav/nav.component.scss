@@ -69,6 +69,7 @@ nav {
     li {
       border-bottom: 1px solid #e8e8e8;
       display: block;
+      padding: 0 0 10px 0;
     }
     img {
       float: left;
@@ -127,4 +128,15 @@ nav {
 .logo {
   width: 120px;
   height: 60px;
+}
+
+.checkout {
+  background-color: #f60d0f;
+  border-color: #f60d0f;
+  color: #fff;
+  &:disabled {
+    background-color: pink;
+    border-color: pink;
+    cursor: not-allowed;
+  }
 }

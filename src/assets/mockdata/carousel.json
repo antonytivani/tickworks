@@ -1,21 +1,21 @@
 [
   {
-    "banner": "../../../assets/images/banner-image1.jpg",
+    "banner": "../../../assets/images/banners/banner-image1.jpg",
     "title": "Title",
     "description": "Description"
   },
   {
-    "banner": "../../../assets/images/banner-image4.jpg",
+    "banner": "../../../assets/images/banners/banner-image4.jpg",
     "title": "Title",
     "description": "Description"
   },
   {
-    "banner": "../../../assets/images/banner-image2.jpg",
+    "banner": "../../../assets/images/banners/banner-image2.jpg",
     "title": "Title",
     "description": "Description"
   },
   {
-    "banner": "../../../assets/images/banner-image3.jpg",
+    "banner": "../../../assets/images/banners/banner-image3.jpg",
     "title": "Title",
     "description": "Description"
   }
