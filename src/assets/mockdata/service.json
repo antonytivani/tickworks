@@ -4,20 +4,20 @@
     "servicename": "Satisfaction Guaranteed",
     "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
     "linkdescription": "Shop Now",
-    "link": "#"
+    "link": "shop"
   },
   {
     "icon": "fas fa-rocket",
     "servicename": "Fast Shipping",
     "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
     "linkdescription": "Shop Now",
-    "link": "#"
+    "link": "shop"
   },
   {
     "icon": "fas fa-dollar-sign",
     "servicename": "UV Protection",
     "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
     "linkdescription": "Shop Now",
-    "link": "#"
+    "link": "shop"
   }
 ]
