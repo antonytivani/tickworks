@@ -2,21 +2,21 @@
   {
     "icon": "far fa-hand-paper",
     "servicename": "Satisfaction Guaranteed",
-    "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "description": "100% Guaranted to be satisfied with our genuine products",
     "linkdescription": "Shop Now",
     "link": "shop"
   },
   {
     "icon": "fas fa-rocket",
     "servicename": "Fast Shipping",
-    "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "description": "Your parcel comes to you within a few days, Just leave us your address",
     "linkdescription": "Shop Now",
     "link": "shop"
   },
   {
     "icon": "fas fa-dollar-sign",
-    "servicename": "UV Protection",
-    "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "servicename": "Affordable",
+    "description": "Authentic Premium watches at affordable prices that fits in everyone's budget",
     "linkdescription": "Shop Now",
     "link": "shop"
   }
