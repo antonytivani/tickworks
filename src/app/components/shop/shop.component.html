@@ -15,94 +15,10 @@
 <!--//banner -->
 
 <!--/shop-->
-<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+<section class="banner-bottom-wthreelayouts py-3">
   <div class="container-fluid">
-    <div class="inner-sec-shop px-lg-4 px-3">
-      <h3 class="tittle-w3layouts my-lg-4">New Arrivals for you</h3>
-      <div class="row">
-        <!--/product right-->
-        <div class="left-ads-display col-lg-12">
-          <div class="wrapper_top_shop">
-            <div class="row">
-              <div class="col-md-6 shop_left">
-                <img src="images/banner3.jpg" alt="" />
-                <h6>40% off</h6>
-              </div>
-              <div class="col-md-6 shop_right">
-                <img src="images/banner4.jpg" alt="" />
-                <h6>50% off</h6>
-              </div>
-            </div>
-            <div class="row">
-              <!-- /womens -->
-              <div class="col-md-3 product-men women_two shop-gd" *ngFor="let product of products; let i = index">
-                <div class="product-googles-info googles mb-3" *ngIf="i < 18">
-                  <div class="men-pro-item">
-                    <div class="men-thumb-item">
-                      <img src="{{ product.image }}" class="img-fluid" alt="" />
-                      <div class="men-cart-pro">
-                        <div class="inner-men-cart-pro">
-                          <a role="button" (click)="setCurProduct(product)" class="link-product-add-cart">add to cart</a>
-                        </div>
-                      </div>
-                      <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                      <div class="info-product-price">
-                        <div class="grid_meta">
-                          <div class="product_price">
-                            <h4>
-                              <!--  -->
-                              <a href="single.html">{{ product.name }}</a>
-                            </h4>
-                            <div class="grid-price mt-2">
-                              <span class="money">{{ product.price | currency: 'R' }}</span>
-                            </div>
-                          </div>
-                          <ul class="stars">
-                            <li>
-                              <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="googles single-item hvr-outline-out">
-                          <button (click)="setCurProduct(product)" class="googles-cart pgoogles-cart">
-                            <i class="fas fa-cart-plus"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="clearfix"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--//product right-->
-      </div>
+    <div class="inner-sec-shop px-3">
+      <app-new-arrivals></app-new-arrivals>
       <!--/slide-->
       <div class="slider-img mid-sec mt-lg-5 mt-2">
         <!--//banner-sec-->
