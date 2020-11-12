@@ -2368,6 +2368,12 @@ ul.links li a:hover {
   }
 }
 
+@media (max-width: 1024px) {
+  .carousel-inner {
+    height: 40vw;
+  }
+}
+
 /*-- //responsive media queries --*/
 
 /* custom styles */
