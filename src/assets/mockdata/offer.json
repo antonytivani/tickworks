@@ -2,21 +2,21 @@
   {
     "icon": "fas fa-gift",
     "offername": "Genuine Product",
-    "description": "Lorem ipsum dolor sit amet, consectetur"
+    "description": "Keeping it real 100%"
   },
   {
     "icon": "fas fa-shield-alt",
     "offername": "Secure Products",
-    "description": "Lorem ipsum dolor sit amet, consectetur"
+    "description": "Safe. dependable; not liable to fail."
   },
   {
     "icon": "fas fa-dollar-sign",
     "offername": "Cash on Delivery",
-    "description": "Lorem ipsum dolor sit amet, consectetur"
+    "description": "Only pay when you receive your product"
   },
   {
     "icon": "fas fa-truck",
     "offername": "Easy Delivery",
-    "description": "Lorem ipsum dolor sit amet, consectetur"
+    "description": "We come to your preffered address"
   }
 ]
