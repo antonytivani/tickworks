@@ -4,20 +4,20 @@
     "servicename": "Satisfaction Guaranteed",
     "description": "100% Guaranted to be satisfied with our genuine products",
     "linkdescription": "Shop Now",
-    "link": "shop"
+    "link": "/shop"
   },
   {
     "icon": "fas fa-rocket",
     "servicename": "Fast Shipping",
     "description": "Your parcel comes to you within a few days, Just leave us your address",
     "linkdescription": "Shop Now",
-    "link": "shop"
+    "link": "/shop"
   },
   {
     "icon": "fas fa-dollar-sign",
     "servicename": "Affordable",
     "description": "Authentic Premium watches at affordable prices that fits in everyone's budget",
     "linkdescription": "Shop Now",
-    "link": "shop"
+    "link": "/shop"
   }
 ]
