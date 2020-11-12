@@ -2369,8 +2369,17 @@ ul.links li a:hover {
 }
 
 @media (max-width: 1024px) {
-  .carousel-inner {
-    height: 40vw;
+  app-carousel {
+    .carousel-inner {
+      height: 40vw;
+    }
+  }
+
+  app-upcoming-notification-countdown {
+    .middle-slider {
+      padding: 2vw;
+      margin: -2vw 0 3vw 0 !important;
+    }
   }
 }
 
