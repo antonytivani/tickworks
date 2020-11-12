@@ -3,48 +3,48 @@
     "image": "../../../assets/images/shop/leather-belt.png",
     "name": "Tevise",
     "price": "R999.00",
-    "quantity" : 1
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch7.png",
+    "image": "../../../assets/images/shop/watch7.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch6.png",
+    "image": "../../../assets/images/shop/watch6.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch7.png",
+    "image": "../../../assets/images/shop/watch7.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch6.png",
+    "image": "../../../assets/images/shop/watch6.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch7.png",
+    "image": "../../../assets/images/shop/watch7.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch6.png",
+    "image": "../../../assets/images/shop/watch6.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   },
   {
-    "image": "../../../assets/images/watch7.png",
+    "image": "../../../assets/images/shop/watch7.png",
     "name": "Title",
-    "price": "1200",
-    "quantity" : 1
+    "price": "649.00",
+    "quantity": 1
   }
 ]

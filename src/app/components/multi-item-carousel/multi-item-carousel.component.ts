@@ -44,25 +44,25 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: '../../../assets/images/shop/watch6.png',
       name: 'Title',
-      price: 1200,
+      price: 649.0,
       quantity: 1,
     },
     {
       image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
-      price: 1200,
+      price: 649.0,
       quantity: 1,
     },
     {
       image: '../../../assets/images/shop/watch6.png',
       name: 'Title',
-      price: 1200,
+      price: 649.0,
       quantity: 1,
     },
     {
       image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
-      price: 1200,
+      price: 649.0,
       quantity: 1,
     },
   ];
