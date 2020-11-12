@@ -14,8 +14,8 @@ export class EmailService {
       Host: 'smtp.elasticemail.com',
       Username: 'tony.tivani@gmail.com',
       Password: '6CB0492DEC4B217E69C5603DE14A5A9A3577',
-      To: 'tony.tivani@gmail.com',
-      From: 'tony.tivani@gmail.com',
+      To: 'mofokengt2909@gmail.com',
+      From: 'mofokengt2909@gmail.com',
       Subject: payload.subject,
       Body: payload.body,
     }).then(console.log('email sent'));
