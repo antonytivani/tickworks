@@ -4,6 +4,10 @@ import { MultiCarouselService } from 'src/app/services/multi-carousel';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 
+// modal
+import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
+import { ModalComponent } from "../../components/modal/modal.component";
+
 @Component({
   selector: 'app-multi-item-carousel',
   templateUrl: './multi-item-carousel.component.html',
@@ -13,8 +17,12 @@ export class MultiItemCarouselComponent implements OnInit {
   // cards: MultiCarousel[];
 
   currentProduct: Product;
+  modalRef: MDBModalRef
 
-  constructor(private multiCarouselService: MultiCarouselService, private cartService: CartService) {}
+  constructor(
+    private multiCarouselService: MultiCarouselService, 
+    private cartService: CartService, 
+    private modalService: MDBModalService) {}
 
   cards = [
     {
@@ -75,11 +83,18 @@ export class MultiItemCarouselComponent implements OnInit {
     }
     return R;
   }
+
   ngOnInit() {
     this.slides = this.chunk(this.cards, 4);
   }
 
   setCurProduct(curProd: Product) {
     this.currentProduct = curProd;
+    this.openModal( curProd )
   }
+  
+   openModal( product: Product ) {
+     this.modalRef = this.modalService.show(ModalComponent, { data: { product: product } })
+   }
 }
+
