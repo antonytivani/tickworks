@@ -2413,19 +2413,20 @@ app-checkout {
     padding: 10% 4%;
   }
 
-  app-about-us,
-  app-contact-us {
+  app-about-us {
     .banner_inner {
-      margin-bottom: -20vw !important;
+      margin-bottom: -10vw !important;
     }
   }
 
   app-shop,
+  app-contact-us,
   app-checkout {
     .banner_inner {
-      margin-bottom: -26vw !important;
+      margin-bottom: -15vw !important;
     }
   }
+
   .shopping-cart {
     width: 101vw !important;
   }
