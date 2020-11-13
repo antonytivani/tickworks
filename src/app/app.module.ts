@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule, TableModule } from 'angular-bootstrap-md';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+ 
+import { MDBBootstrapModulePro, MDBModalService, ModalModule } from 'ng-uikit-pro-standard';
+
+import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 
 // required animations module
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";  
@@ -42,6 +46,7 @@ import { CheckOutComponent } from './components/checkout/checkout.component';
 import { CartService } from './services/cart.service';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from './services/email.service';
+// import { ModalModule } from 'projects/angular-bootstrap-md/src/public_api';
 
 // MODAL
 // import { MDBBootstrapModulesPro, MDBSpinningPreloader} from "ng-uikit-pro-standard";
@@ -69,8 +74,30 @@ import { EmailService } from './services/email.service';
     ModalComponent,
     
   ],
-  imports: [AppRoutingModule, BrowserModule, HttpClientModule, MDBBootstrapModule.forRoot(), TableModule, FormsModule, BrowserAnimationsModule, ToastrModule.forRoot()],
-  providers: [CarouselService, ProductService, EmailService, CartService, TestimonialsService, MultiCarouselService, ServiceService, OfferService],
+  imports: [
+    AppRoutingModule, 
+    BrowserModule, 
+    HttpClientModule, 
+    MDBBootstrapModule.forRoot(), 
+    MDBBootstrapModulePro.forRoot(),
+    TableModule, 
+    FormsModule, 
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(),
+    ModalModule.forRoot()
+  ],
+  providers: [
+    CarouselService, 
+    ProductService, 
+    EmailService, 
+    CartService, 
+    TestimonialsService, 
+    MultiCarouselService, 
+    ServiceService, 
+    OfferService,
+    MDBSpinningPreloader,
+    MDBModalService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
