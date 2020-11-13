@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
-import { CartService } from 'src/app/services/cart.service';
-import { JsonException } from '@angular-devkit/core';
 
 // modal
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';

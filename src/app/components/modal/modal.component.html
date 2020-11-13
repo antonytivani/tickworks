@@ -13,7 +13,7 @@
     
         <h5 class="mt-1 mb-2 text-center">Add to cart</h5>
         <div class="md-form ml-0 mr-0">
-          <select ([value])="(selected)" (change)="handleSelectChange($event)" class="browser-default custom-select">
+          <select ([value])="(selectedQuantity)" (change)="handleSelectChange($event)" class="browser-default custom-select">
             <option selected>Number of items</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -27,7 +27,7 @@
           </button>
           <button
             mdbBtn
-            [disabled]="!selected"
+            [disabled]="!selectedQuantity"
             (click)="addProductToCart(product)"
             color="cyan"
             rounded="true"
