@@ -7,7 +7,7 @@
   <mdb-carousel-item class="nobackground" *ngFor="let item of slides; let i = index">
     <div class="row">
       <div class="col-md-3 product-men women_two" *ngFor="let product of item">
-        <div class="product-googles-info googles mb-3">
+        <div class="product-googles-info googles mb-3 product-wrapper">
           <div class="men-pro-item">
             <div class="men-thumb-item">
               <img src="{{ product.image }}" class="img-fluid" alt="" />
@@ -26,7 +26,7 @@
                       <a href="single.html">{{ product.name }}</a>
                     </h4>
                     <div class="grid-price mt-2">
-                      <span class="money">{{ product.price  | currency: 'R' }}</span>
+                      <span class="money">{{ product.price | currency: 'R' }}</span>
                     </div>
                   </div>
                   <ul class="stars">
@@ -58,9 +58,9 @@
                   </ul>
                 </div>
                 <div class="googles single-item hvr-outline-out">
-                    <button (click)="setCurProduct(product)" class="googles-cart pgoogles-cart">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
+                  <button (click)="setCurProduct(product)" class="googles-cart pgoogles-cart">
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
                 </div>
               </div>
               <div class="clearfix"></div>
