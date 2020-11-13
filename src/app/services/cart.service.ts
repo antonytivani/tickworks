@@ -3,18 +3,29 @@ import { Product } from '../models/product';
 
 @Injectable()
 export class CartService {
-  cart: Product[] = [];
+  cart = [];
   total: number = 0;
   totalQuantity: number = 0;
 
   constructor() {}
 
-  addProduct(product: Product) {
-    this.cart.push(product);
-  }
 
-  removeProduct(product: Product): void {
-    this.cart = this.cart.filter((item) => item !== product);
+  // ============================================= 
+  // addProduct not working
+
+  addProduct(product: Product) {
+    // if product in cart:
+    //   increament Qty
+    // this.cart
+
+    this.cart.push(product);
+    // console.log(this.cart);
+    
+  }
+  // ================================================
+  
+  removeProduct(product: Product): void {  
+    this.cart.splice(this.cart.lastIndexOf(product), 1)
   }
 
   cartSize() {
