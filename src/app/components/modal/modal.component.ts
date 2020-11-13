@@ -1,11 +1,8 @@
-import { Component, OnInit, OnChanges, ViewChild, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from "ng-uikit-pro-standard";
-
-import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { ToastrService } from 'ngx-toastr';
-import { inputNames } from '@angular/cdk/schematics';
 
 
 @Component({
@@ -14,30 +11,41 @@ import { inputNames } from '@angular/cdk/schematics';
   styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent implements OnInit {
-  selected: number;
+  selectedQuantity: number;
   product: Product
 
   constructor(
-    private productService: ProductService,
     private cartService: CartService,
     private toastr: ToastrService,
     public modalRef: MDBModalRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {}
 
   addProductToCart(product: Product) {
-    this.cartService.addProduct(product);
+
+    if (!this.cartService.cart.includes(product)) {
+      product.quantity = this.selectedQuantity;
+      this.cartService.addProduct(product);
+    } else {
+      for (let i = 0; i < this.cartService.cart.length; i++) {
+        if (this.cartService.cart[i].name === this.product.name) {
+          this.cartService.cart[i].quantity += this.selectedQuantity
+          break
+        } 
+      }
+    }
+
+    // hide modal
+    this.modalRef.hide();
+
+    // open Toastr
     this.showSuccess(`${product.name}`);
-    this.modalRef.hide()
   }
 
   // incr product.quantity if change event detected on select element
   handleSelectChange(e) {
-    this.product.quantity = e.target.options.selectedIndex;
-    this.selected = e.target.options.selectedIndex;
-    console.log(this.selected);
-    
+    this.selectedQuantity = e.target.options.selectedIndex;
   }
 
   showSuccess(msg: string) {
