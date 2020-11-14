@@ -27,10 +27,8 @@ export class NewArrivalsComponent implements OnInit {
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
-      console.log(products);
       
     });
-    // console.log();
     
   }
 
@@ -62,8 +60,6 @@ export class NewArrivalsComponent implements OnInit {
           const element = collection[index];
           element.classList.add('rated')
         }
-
-        console.log(avarage);
         
       }
       
