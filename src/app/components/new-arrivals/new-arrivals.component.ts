@@ -13,8 +13,9 @@ import { ModalComponent } from "../../components/modal/modal.component";
 })
 export class NewArrivalsComponent implements OnInit {
   products: Product[];
-
+  fakeArray = new Array(5)
   modalRef: MDBModalRef
+  voted: boolean = false
 
   // track currect product
   currentProduct: Product ;
@@ -26,7 +27,11 @@ export class NewArrivalsComponent implements OnInit {
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
+      console.log(products);
+      
     });
+    // console.log();
+    
   }
 
   setCurProduct(curProd: Product) {
@@ -37,4 +42,33 @@ export class NewArrivalsComponent implements OnInit {
   openModal( product: Product ) {
     this.modalRef = this.modalService.show(ModalComponent, { data: { product: product } })
   }
+
+  // ============================================================================
+  // hack
+  rate(e, product: Product) {
+    let collection = e.target.parentElement.parentElement.parentElement.childNodes
+    let item = e.target.parentElement.parentElement
+    
+    collection.forEach( ( e, i )=> {
+      if (e === item) {
+        let sel = i 
+        
+        product.noOfStars += sel + 1
+        product.votes += 1
+
+        let avarage = Math.round(product.noOfStars / product.votes)
+                
+        for (let index = 0; index < avarage; index++) {
+          const element = collection[index];
+          element.classList.add('rated')
+        }
+
+        console.log(avarage);
+        
+      }
+      
+    })
+   
+  }
+  // ========================================================================
 }

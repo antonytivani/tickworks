@@ -4,4 +4,6 @@ export class Product {
   price: number;
   description?: string;
   quantity?: number = 1;
+  noOfStars?: number;
+  votes?: number
 }

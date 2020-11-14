@@ -30,6 +30,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.rated i{
+  color: orange !important;
+  
+}
+
 input.ng-invalid.ng-touched {
   border-color: #fa787e !important;
 }
@@ -43,7 +48,7 @@ input.ng-invalid.ng-touched {
   -webkit-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  moz-background-size: cover;
+  -moz-background-size: cover;
   min-height: 180px;
 }
 div.carousel.carousel-multi-item.multi-animation {

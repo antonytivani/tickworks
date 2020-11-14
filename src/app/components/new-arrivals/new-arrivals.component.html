@@ -26,30 +26,11 @@
                     <span class="money">{{ product.price | currency: 'R' }}</span>
                   </div>
                 </div>
-                <ul class="stars">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <!-- product rating -->
+                <ul  class="stars">
+                  <li  *ngFor="let slidez of fakeArray; let i = index">
+                    <a role="button" >
+                      <i (click)="rate($event, product)"class="fa fa-star"  aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>
