@@ -1,7 +1,13 @@
 /* .modal-header,  */
-.modal-dialog, 
+/* .modal-dialog, 
 .cascading-modal, 
 .modal-avatar, 
 img {
   background: #fff;
+} */
+
+.modal-dialog .modal-content {
+  box-shadow: 0 0 #fff;
+  border-radius: 0.125rem;
+  border: 0;
 }
