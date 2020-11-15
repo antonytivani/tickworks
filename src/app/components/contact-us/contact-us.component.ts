@@ -38,7 +38,8 @@ export class ContactUsComponent implements OnInit {
           border-radius: 6px;
           margin-top: 1em;
           border-radius: 6px;
-          
+          border-bottom-color: red;
+          border-bottom-width: 2px;
         }
     
         .header{
