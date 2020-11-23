@@ -52,7 +52,7 @@ export class MultiItemCarouselComponent implements OnInit {
     },
     {
       image: '../../../assets/images/shop/watch_011.png',
-      name: 'Curren 000',
+      name: 'Naviforce',
       price: 599.0,
       quantity: 1,
       noOfStars: 0,
@@ -67,14 +67,6 @@ export class MultiItemCarouselComponent implements OnInit {
       votes: 0
     },
     {
-      image: '../../../assets/images/shop/watch7.png',
-      name: 'Title',
-      price: 649.0,
-      quantity: 1,
-      noOfStars: 0,
-      votes: 0
-    },
-    {
       image: '../../../assets/images/shop/watch6.png',
       name: 'Title',
       price: 649.0,
@@ -86,6 +78,86 @@ export class MultiItemCarouselComponent implements OnInit {
       image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
       price: 649.0,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },  
+    {
+      image: "../../../assets/images/shop/winner-gold.png",
+      name: "Winner Skeleton Gold",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/cur-148.png",
+      name: "Curren 148",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/new002.jpg",
+      name: "Curren 148 Black",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/new003.png",
+      name: "title",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/sanda.png",
+      name: "Sanda",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/smael-1803.jpg",
+      name: "Smael 1803",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/navi-1953.png",
+      name: "NaviForce 9153",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/Curren135.png",
+      name: "Curren 135",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/cur-181.png",
+      name: "Curren 181",
+      price: undefined,
+      quantity: 1,
+      noOfStars: 0,
+      votes: 0
+    },
+    {
+      image: "../../../assets/images/shop/winner-silver.png",
+      name: "Winner Silver",
+      price: undefined,
       quantity: 1,
       noOfStars: 0,
       votes: 0
