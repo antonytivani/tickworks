@@ -147,7 +147,7 @@ export class MultiItemCarouselComponent implements OnInit {
       votes: 0
     },
     {
-      image: "../../../assets/images/shop/winner-silver.png",
+      image: "../../../assets/images/shop/winner-new.png",
       name: "Winner Silver",
       price: undefined,
       quantity: 1,
