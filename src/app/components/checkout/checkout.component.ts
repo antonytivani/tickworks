@@ -58,12 +58,13 @@ export class CheckOutComponent implements OnInit, AfterViewInit {
   placeOrder() {
     let order: string = '<ul>';
     this.elements.forEach((product) => {
+      let tot = (product.quantity * product.price).toLocaleString("en-ZA")
       order += `
       <li>
         <div>
           <p class="product-name">${product.name}</p>
           <p>Quantity: ${product.quantity}</p>
-          <p class="product-total">R ${product.quantity * product.price}</p>
+          <p class="product-total">R ${tot}</p>
         </div>
       </li>`;
     });
@@ -196,7 +197,7 @@ export class CheckOutComponent implements OnInit, AfterViewInit {
             ${order}     
           </div>
           <p class="footer">Total Price
-            <span>R ${this.total}</span>
+            <span>R ${this.total.toLocaleString('en-ZA')}</span>
           </p>
         </div>
       </body>
