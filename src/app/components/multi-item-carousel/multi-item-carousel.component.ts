@@ -67,14 +67,6 @@ export class MultiItemCarouselComponent implements OnInit {
       votes: 0
     },
     {
-      image: '../../../assets/images/shop/watch6.png',
-      name: 'Title',
-      price: 649.0,
-      quantity: 1,
-      noOfStars: 0,
-      votes: 0
-    },
-    {
       image: '../../../assets/images/shop/watch7.png',
       name: 'Title',
       price: 649.0,
