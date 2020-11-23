@@ -1,5 +1,13 @@
 [
   {
+    "image": "../../../assets/images/shop/watch6.png",
+    "name": "Curren 8291",
+    "price": 649.0,
+    "quantity": 1,
+    "noOfStars": 0,
+    "votes": 0
+  },
+  {
     "image": "../../../assets/images/shop/curren-blue.png",
     "name": "Curren 8355",
     "price": 799.0,
@@ -9,14 +17,6 @@
   },
   {
     "image": "../../../assets/images/shop/watch7.png",
-    "name": "Curren 8291",
-    "price": 649.0,
-    "quantity": 1,
-    "noOfStars": 0,
-    "votes": 0
-  },
-  {
-    "image": "../../../assets/images/shop/watch6.png",
     "name": "Curren 8291",
     "price": 649.0,
     "quantity": 1,
