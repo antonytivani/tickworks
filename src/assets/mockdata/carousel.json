@@ -1,6 +1,6 @@
 [
   {
-    "banner": "../../../assets/images/banners/banner04.jpg",
+    "banner": "../../../assets/images/banners/banner05.jpg",
     "title": "Title",
     "description": "Description"
   },
@@ -20,7 +20,7 @@
     "description": "Description"
   },
   {
-    "banner": "../../../assets/images/banners/banner05.jpg",
+    "banner": "../../../assets/images/banners/banner04.jpg",
     "title": "Title",
     "description": "Description"
   }
