@@ -77,7 +77,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/winner-gold.png",
       name: "Winner Skeleton Gold",
-      price: undefined,
+      price: 749,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -85,7 +85,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/cur-148.png",
       name: "Curren 148",
-      price: undefined,
+      price: 449,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -93,7 +93,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/new002.jpg",
       name: "Curren 148 Black",
-      price: undefined,
+      price: 449,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -101,7 +101,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/new003.png",
       name: "title",
-      price: undefined,
+      price: 449,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -109,7 +109,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/sanda.png",
       name: "Sanda",
-      price: undefined,
+      price: 399,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -117,7 +117,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/smael-1803.jpg",
       name: "Smael 1803",
-      price: undefined,
+      price: 399,
       quantity: 1,
       noOfStars: 0,
       votes: 0
@@ -149,7 +149,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/winner-new.png",
       name: "Winner Silver",
-      price: undefined,
+      price: 749,
       quantity: 1,
       noOfStars: 0,
       votes: 0
