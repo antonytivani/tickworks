@@ -2430,9 +2430,28 @@ app-checkout {
   .shopping-cart {
     width: 101vw !important;
   }
+
+  .cart-dropdown {
+    display: none;
+  }
+  .cart-dropdown-mobile {
+    color: #fff;
+    position: absolute;
+    top: 24px;
+    right: 50px;
+  }
 }
 
+@media (min-width: 1024px) {
+  .cart-dropdown-mobile {
+    display: none;
+  }
+}
 /*-- //responsive media queries --*/
+
+.cart-dropdown-mobile {
+  list-style: none;
+}
 
 /* custom styles */
 .controls-top {

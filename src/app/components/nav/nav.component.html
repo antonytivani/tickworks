@@ -69,7 +69,7 @@
           <mdb-icon fab icon="instagram"></mdb-icon>
         </a>
       </li>
-      <li class="nav-item dropdown" dropdown>
+      <li class="nav-item dropdown cart-dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect
           >{{ getCartSize() }}<mdb-icon fas icon="cart-arrow-down"></mdb-icon
         ></a>
@@ -105,3 +105,42 @@
   <!-- Collapsible content -->
 </mdb-navbar>
 <!--/.Navbar-->
+<div>
+  <ul class="cart-dropdown-mobile">
+    <li class="nav-item dropdown" dropdown>
+      <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect
+        >{{ getCartSize() }}<mdb-icon fas icon="cart-arrow-down"></mdb-icon
+      ></a>
+      <div
+        *dropdownMenu
+        class="dropdown-menu dropdown-menu-right dropdown dropdown-primary shopping-cart-mobile"
+        role="menu"
+      >
+        <div class="shopping-cart shopping-cart-mobile">
+          <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{ getCartSize() }}</span>
+            <div class="shopping-cart-total">
+              <span class="lighter-text">Total:</span>
+              <span class="main-color-text">{{ getTotalPrice() | currency: 'R' }}</span>
+            </div>
+          </div>
+          <!--end shopping-cart-header -->
+
+          <ul class="shopping-cart-items" *ngFor="let product of cartItems">
+            <li class="clearfix">
+              <img src="{{ product.image }}" />
+              <span class="item-name">{{ product.name }}</span>
+              <span class="item-price">{{ product.price | currency: 'R' }}</span
+              ><br />
+              <span class="item-quantity">Quantity: {{ product.quantity }}</span>
+            </li>
+          </ul>
+
+          <button (click)="checkout()" [disabled]="getCartSize() <= 0" class="form-control checkout">Checkout</button>
+        </div>
+        <!--end shopping-cart -->
+        <!--end container -->
+      </div>
+    </li>
+  </ul>
+</div>
