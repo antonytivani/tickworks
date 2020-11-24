@@ -60,7 +60,7 @@ export class MultiItemCarouselComponent implements OnInit {
     },
     {
       image: '../../../assets/images/shop/watch6.png',
-      name: 'Title',
+      name: 'Curren 8291 Black',
       price: 649.0,
       quantity: 1,
       noOfStars: 0,
@@ -68,7 +68,7 @@ export class MultiItemCarouselComponent implements OnInit {
     },
     {
       image: '../../../assets/images/shop/watch7.png',
-      name: 'Title',
+      name: 'Curren 8291',
       price: 649.0,
       quantity: 1,
       noOfStars: 0,
@@ -100,7 +100,7 @@ export class MultiItemCarouselComponent implements OnInit {
     },
     {
       image: "../../../assets/images/shop/new003.png",
-      name: "title",
+      name: "Curren",
       price: 449,
       quantity: 1,
       noOfStars: 0,
@@ -125,7 +125,7 @@ export class MultiItemCarouselComponent implements OnInit {
     {
       image: "../../../assets/images/shop/navi-1953.png",
       name: "NaviForce 9153",
-      price: undefined,
+      price: 849,
       quantity: 1,
       noOfStars: 0,
       votes: 0
