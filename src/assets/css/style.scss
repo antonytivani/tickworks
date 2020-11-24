@@ -2440,11 +2440,38 @@ app-checkout {
     top: 24px;
     right: 50px;
   }
+  .shopping-cart::after {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
   .cart-dropdown-mobile {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping-cart-mobile {
+    left: -85vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .shopping-cart-mobile {
+    left: -73vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .shopping-cart-mobile {
+    left: -68vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .shopping-cart-mobile {
+    left: -62vw;
   }
 }
 /*-- //responsive media queries --*/

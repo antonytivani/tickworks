@@ -6,7 +6,7 @@ import { CartService } from 'src/app/services/cart.service';
 
 // modal
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
-import { ModalComponent } from "../../components/modal/modal.component";
+import { ModalComponent } from '../../components/modal/modal.component';
 
 @Component({
   selector: 'app-multi-item-carousel',
@@ -17,13 +17,14 @@ export class MultiItemCarouselComponent implements OnInit {
   // cards: MultiCarousel[];
 
   currentProduct: Product;
-  modalRef: MDBModalRef
-  fakeArray = new Array(5)
+  modalRef: MDBModalRef;
+  fakeArray = new Array(5);
 
   constructor(
     private multiCarouselService: MultiCarouselService,
     private cartService: CartService,
-    private modalService: MDBModalService) { }
+    private modalService: MDBModalService
+  ) {}
 
   cards = [
     {
@@ -32,7 +33,7 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 999.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
       image: '../../../assets/images/shop/5.png',
@@ -40,7 +41,7 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 699.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
       image: '../../../assets/images/shop/new-3.png',
@@ -48,7 +49,7 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 599.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
       image: '../../../assets/images/shop/watch_011.png',
@@ -56,7 +57,7 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 599.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
       image: '../../../assets/images/shop/watch6.png',
@@ -64,7 +65,7 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 649.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
       image: '../../../assets/images/shop/watch7.png',
@@ -72,87 +73,87 @@ export class MultiItemCarouselComponent implements OnInit {
       price: 649.0,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
-    },  
+      votes: 0,
+    },
     {
-      image: "../../../assets/images/shop/winner-gold.png",
-      name: "Winner Skeleton Gold",
+      image: '../../../assets/images/shop/winner-gold.png',
+      name: 'Winner Skeleton Gold',
       price: 749,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/cur-148.png",
-      name: "Curren 148",
+      image: '../../../assets/images/shop/cur-148.png',
+      name: 'Curren 148',
       price: 449,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/new002.jpg",
-      name: "Curren 148 Black",
+      image: '../../../assets/images/shop/new002.jpg',
+      name: 'Curren 148 Black',
       price: 449,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/new003.png",
-      name: "Curren",
+      image: '../../../assets/images/shop/new003.png',
+      name: 'Curren',
       price: 449,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/sanda.png",
-      name: "Sanda",
+      image: '../../../assets/images/shop/sanda.png',
+      name: 'Sanda',
       price: 399,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/smael-1803.jpg",
-      name: "Smael 1803",
+      image: '../../../assets/images/shop/smael-1803.jpg',
+      name: 'Smael 1803',
       price: 399,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/navi-1953.png",
-      name: "NaviForce 9153",
+      image: '../../../assets/images/shop/navi-1953.png',
+      name: 'NaviForce 9153',
       price: 849,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/Curren135.png",
-      name: "Curren 135",
-      price: undefined,
+      image: '../../../assets/images/shop/Curren135.png',
+      name: 'Curren 135',
+      price: 599,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/cur-181.png",
-      name: "Curren 181",
-      price: undefined,
+      image: '../../../assets/images/shop/cur-181.png',
+      name: 'Curren 181',
+      price: 799,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
     {
-      image: "../../../assets/images/shop/winner-new.png",
-      name: "Winner Silver",
+      image: '../../../assets/images/shop/winner-new.png',
+      name: 'Winner Silver',
       price: 749,
       quantity: 1,
       noOfStars: 0,
-      votes: 0
+      votes: 0,
     },
   ];
 
@@ -171,40 +172,36 @@ export class MultiItemCarouselComponent implements OnInit {
 
   setCurProduct(curProd: Product) {
     this.currentProduct = curProd;
-    this.openModal(curProd)
+    this.openModal(curProd);
   }
 
   openModal(product: Product) {
-    this.modalRef = this.modalService.show(ModalComponent, { data: { product: product } })
+    this.modalRef = this.modalService.show(ModalComponent, { data: { product: product } });
   }
 
   // ============================================================================
   // hack
   rate(e, product: Product) {
-    let collection = e.target.parentElement.parentElement.parentElement.childNodes
-    let item = e.target.parentElement.parentElement
+    let collection = e.target.parentElement.parentElement.parentElement.childNodes;
+    let item = e.target.parentElement.parentElement;
 
     collection.forEach((e, i) => {
       if (e === item) {
-        let sel = i
+        let sel = i;
 
-        product.noOfStars += sel + 1
-        product.votes += 1
+        product.noOfStars += sel + 1;
+        product.votes += 1;
 
-        let avarage = Math.round(product.noOfStars / product.votes)
+        let avarage = Math.round(product.noOfStars / product.votes);
 
         for (let index = 0; index < avarage; index++) {
           const element = collection[index];
-          element.classList.add('rated')
+          element.classList.add('rated');
         }
 
         console.log(avarage);
-
       }
-
-    })
-
+    });
   }
   // ========================================================================
 }
-
