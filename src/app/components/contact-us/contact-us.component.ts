@@ -58,27 +58,7 @@ export class ContactUsComponent implements OnInit {
         .content{
           padding: 1em;
         }
-    
-        ul {
-          list-style-type: none; 
-          padding: 1em; 
-          margin: 0; 
-        }
-    
-        ul li:first-child{
-          border-top: 1px solid #f1f1f1;
-        }
-    
-        ul li {
-          font-size: 12px;
-          border-bottom: 1px solid #f1f1f1;
-          padding: 12px; 
-        }
-    
-        ul li:last-child{
-          border-bottom: none;
-        }
-    
+
         .summary, .user-heading, .comment, .comment-heading{
           font-weight: 300;
           color: rgba(0,0,0,0.5);
@@ -91,30 +71,7 @@ export class ContactUsComponent implements OnInit {
           color: rgba(0,0,0,0.8);
           margin-bottom: 1em;
         }
-        .footer{
-          background-color: #f00;
-          color: #fff;
-          padding: 1em;
-          border-bottom-left-radius: 6px;
-          border-bottom-right-radius: 6px;
-        }
-    
-        .footer span{
-          display: block; 
-          text-align: center; 
-          font-size: 18px;
-          font-weight: 500;
-        }
-    
-        .product-name{
-          font-size: 14px;
-        }
-        .product-total{
-          font-weight: 500;
-          text-align: right;
-          color: red;
-        }
-    
+
         .user{
           border-bottom: 1px solid #ccc;
           font-size: 14px;
@@ -122,8 +79,7 @@ export class ContactUsComponent implements OnInit {
           color: rgba(0, 0, 0, 0.5);
           margin-bottom: 1em;
         }
-    
-    
+        
         .user p{
           text-align: center;;
         }

@@ -173,7 +173,7 @@ export class CheckOutComponent implements OnInit, AfterViewInit {
     
     
         .user p{
-          text-align: center;;
+          text-align: center;
         }
       </style>
     </head>
