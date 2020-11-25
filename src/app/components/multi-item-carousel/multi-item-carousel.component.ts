@@ -92,7 +92,7 @@ export class MultiItemCarouselComponent implements OnInit {
       votes: 0,
     },
     {
-      image: '../../../assets/images/shop/new002.jpg',
+      image: '../../../assets/images/shop/new002.png',
       name: 'Curren 148 Black',
       price: 449,
       quantity: 1,
@@ -116,7 +116,7 @@ export class MultiItemCarouselComponent implements OnInit {
       votes: 0,
     },
     {
-      image: '../../../assets/images/shop/smael-1803.jpg',
+      image: '../../../assets/images/shop/smael-1803.png',
       name: 'Smael 1803',
       price: 399,
       quantity: 1,
